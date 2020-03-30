@@ -1,0 +1,47 @@
+Begin of StarSTREAM section.
+-------------------------------------------------------------
+This system uses 8 bytes per DOUBLE PRECISION word.
+-------------------------------------------------------------
+Array size = 60000000, Offset = 0
+Total memory required = 1.3411 GiB.
+Each test is run 10 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+The SCALAR value used for this run is 0.420000
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 1 microseconds.
+Each test below will take on the order of 489846 microseconds.
+   (= 489846 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+VERBOSE: total setup time for rank 0 = 1.445530 seconds
+-------------------------------------------------------------
+Function      Rate (GB/s)   Avg time     Min time     Max time
+Copy:           1.4210       0.6924       0.6756       0.7166
+Scale:          1.4087       0.6945       0.6815       0.7024
+Add:            1.6054       0.9150       0.8970       0.9424
+Triad:          1.6204       0.9079       0.8887       0.9360
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------
+Node(s) with error 0
+Minimum Copy GB/s 0.000000
+Average Copy GB/s 0.071050
+Maximum Copy GB/s 1.420993
+Minimum Scale GB/s 0.000000
+Average Scale GB/s 0.070434
+Maximum Scale GB/s 1.408678
+Minimum Add GB/s 0.000000
+Average Add GB/s 0.080272
+Maximum Add GB/s 1.605441
+Minimum Triad GB/s 0.000000
+Average Triad GB/s 0.081019
+Maximum Triad GB/s 1.620383
+Current time (1455148483) is Wed Feb 10 18:54:43 2016
+
+End of StarSTREAM section.

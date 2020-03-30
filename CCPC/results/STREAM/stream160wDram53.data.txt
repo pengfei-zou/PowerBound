@@ -1,0 +1,47 @@
+Begin of StarSTREAM section.
+-------------------------------------------------------------
+This system uses 8 bytes per DOUBLE PRECISION word.
+-------------------------------------------------------------
+Array size = 60000000, Offset = 0
+Total memory required = 1.3411 GiB.
+Each test is run 10 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+The SCALAR value used for this run is 0.420000
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 1 microseconds.
+Each test below will take on the order of 2254730 microseconds.
+   (= 2254730 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+VERBOSE: total setup time for rank 0 = 8.422610 seconds
+-------------------------------------------------------------
+Function      Rate (GB/s)   Avg time     Min time     Max time
+Copy:           0.3282       3.0043       2.9247       3.0660
+Scale:          0.3237       3.0159       2.9657       3.0889
+Add:            0.3714       3.9882       3.8771       4.1145
+Triad:          0.3666       3.9696       3.9278       4.0006
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------
+Node(s) with error 0
+Minimum Copy GB/s 0.000000
+Average Copy GB/s 0.016412
+Maximum Copy GB/s 0.328242
+Minimum Scale GB/s 0.000000
+Average Scale GB/s 0.016185
+Maximum Scale GB/s 0.323703
+Minimum Add GB/s 0.000000
+Average Add GB/s 0.018571
+Maximum Add GB/s 0.371415
+Minimum Triad GB/s 0.000000
+Average Triad GB/s 0.018331
+Maximum Triad GB/s 0.366615
+Current time (1455166424) is Wed Feb 10 23:53:44 2016
+
+End of StarSTREAM section.
