@@ -1,0 +1,238 @@
+--------------------------------------------------------------------------
+WARNING: a request was made to bind a process. While the system
+supports binding the process itself, at least one node does NOT
+support binding memory to the process location.
+
+  Node:  n08
+
+Open MPI uses the "hwloc" library to perform process and memory
+binding. This error message means that hwloc has indicated that
+processor binding support is not available on this machine.
+
+On OS X, processor and memory binding is not available at all (i.e.,
+the OS does not expose this functionality).
+
+On Linux, lack of the functionality can mean that you are on a
+platform where processor and memory affinity is not supported in Linux
+itself, or that hwloc was built without NUMA and/or processor affinity
+support. When building hwloc (which, depending on your Open MPI
+installation, may be embedded in Open MPI itself), it is important to
+have the libnuma header and library files available. Different linux
+distributions package these files under different names; look for
+packages with the word "numa" in them. You may also need a developer
+version of the package (e.g., with "dev" or "devel" in the name) to
+obtain the relevant header files.
+
+If you are getting this message on a non-OS X, non-Linux platform,
+then hwloc does not support processor / memory affinity on this
+platform. If the OS/platform does actually support processor / memory
+affinity, then you should contact the hwloc maintainers:
+https://github.com/open-mpi/hwloc.
+
+This is a warning only; your job will continue, though performance may
+be degraded.
+--------------------------------------------------------------------------
+NOT use customized MPI mapping on BGQ
+Using n_rad_buf=7 buffer cells: gyroradius/deltar=0.900307
+istep=1 irk=1 time=0.0
+istep=1 irk=2 time=0.9
+istep=2 irk=1 time=1.6
+istep=2 irk=2 time=2.1
+istep=3 irk=1 time=2.7
+istep=3 irk=2 time=3.2
+istep=4 irk=1 time=3.8
+istep=4 irk=2 time=4.3
+istep=5 irk=1 time=4.9
+istep=5 irk=2 time=5.3
+istep=6 irk=1 time=5.8
+istep=6 irk=2 time=6.3
+istep=7 irk=1 time=6.7
+istep=7 irk=2 time=7.2
+istep=8 irk=1 time=7.6
+istep=8 irk=2 time=8.0
+istep=9 irk=1 time=8.5
+istep=9 irk=2 time=8.9
+istep=10 irk=1 time=9.4
+istep=10 irk=2 time=9.8
+istep=11 irk=1 time=10.3
+istep=11 irk=2 time=10.7
+istep=12 irk=1 time=11.1
+istep=12 irk=2 time=11.6
+istep=13 irk=1 time=12.0
+istep=13 irk=2 time=12.4
+istep=14 irk=1 time=12.9
+istep=14 irk=2 time=13.3
+istep=15 irk=1 time=13.7
+istep=15 irk=2 time=14.1
+istep=16 irk=1 time=14.6
+istep=16 irk=2 time=15.0
+istep=17 irk=1 time=15.4
+istep=17 irk=2 time=15.8
+istep=18 irk=1 time=16.3
+istep=18 irk=2 time=16.7
+istep=19 irk=1 time=17.1
+istep=19 irk=2 time=17.5
+istep=20 irk=1 time=18.0
+istep=20 irk=2 time=18.4
+istep=21 irk=1 time=18.8
+istep=21 irk=2 time=19.2
+istep=22 irk=1 time=19.6
+istep=22 irk=2 time=20.0
+istep=23 irk=1 time=20.5
+istep=23 irk=2 time=20.8
+istep=24 irk=1 time=21.3
+istep=24 irk=2 time=21.7
+istep=25 irk=1 time=22.1
+istep=25 irk=2 time=22.5
+istep=26 irk=1 time=22.9
+istep=26 irk=2 time=23.3
+istep=27 irk=1 time=23.7
+istep=27 irk=2 time=24.1
+istep=28 irk=1 time=24.5
+istep=28 irk=2 time=24.9
+istep=29 irk=1 time=25.4
+istep=29 irk=2 time=25.8
+istep=30 irk=1 time=26.2
+istep=30 irk=2 time=26.6
+istep=31 irk=1 time=27.0
+istep=31 irk=2 time=27.4
+istep=32 irk=1 time=27.8
+istep=32 irk=2 time=28.2
+istep=33 irk=1 time=28.6
+istep=33 irk=2 time=29.0
+istep=34 irk=1 time=29.4
+istep=34 irk=2 time=29.8
+istep=35 irk=1 time=30.2
+istep=35 irk=2 time=30.6
+istep=36 irk=1 time=31.0
+istep=36 irk=2 time=31.4
+istep=37 irk=1 time=31.8
+istep=37 irk=2 time=32.2
+istep=38 irk=1 time=32.6
+istep=38 irk=2 time=33.0
+istep=39 irk=1 time=33.4
+istep=39 irk=2 time=33.8
+istep=40 irk=1 time=34.2
+istep=40 irk=2 time=34.6
+istep=41 irk=1 time=35.0
+istep=41 irk=2 time=35.3
+istep=42 irk=1 time=35.8
+istep=42 irk=2 time=36.1
+istep=43 irk=1 time=36.5
+istep=43 irk=2 time=36.9
+istep=44 irk=1 time=37.3
+istep=44 irk=2 time=37.7
+istep=45 irk=1 time=38.1
+istep=45 irk=2 time=38.5
+istep=46 irk=1 time=38.9
+istep=46 irk=2 time=39.3
+istep=47 irk=1 time=39.7
+istep=47 irk=2 time=40.1
+istep=48 irk=1 time=40.5
+istep=48 irk=2 time=40.9
+istep=49 irk=1 time=41.3
+istep=49 irk=2 time=41.6
+istep=50 irk=1 time=42.0
+istep=50 irk=2 time=42.4
+istep=51 irk=1 time=42.8
+istep=51 irk=2 time=43.2
+istep=52 irk=1 time=43.6
+istep=52 irk=2 time=44.0
+istep=53 irk=1 time=44.4
+istep=53 irk=2 time=44.8
+istep=54 irk=1 time=45.2
+istep=54 irk=2 time=45.5
+istep=55 irk=1 time=45.9
+istep=55 irk=2 time=46.3
+istep=56 irk=1 time=46.7
+istep=56 irk=2 time=47.1
+istep=57 irk=1 time=47.5
+istep=57 irk=2 time=47.9
+istep=58 irk=1 time=48.3
+istep=58 irk=2 time=48.6
+istep=59 irk=1 time=49.0
+istep=59 irk=2 time=49.4
+istep=60 irk=1 time=49.8
+istep=60 irk=2 time=50.2
+istep=61 irk=1 time=50.6
+istep=61 irk=2 time=51.0
+istep=62 irk=1 time=51.4
+istep=62 irk=2 time=51.7
+istep=63 irk=1 time=52.1
+istep=63 irk=2 time=52.5
+istep=64 irk=1 time=52.9
+istep=64 irk=2 time=53.3
+istep=65 irk=1 time=53.7
+istep=65 irk=2 time=54.0
+istep=66 irk=1 time=54.4
+istep=66 irk=2 time=54.8
+istep=67 irk=1 time=55.2
+istep=67 irk=2 time=55.6
+istep=68 irk=1 time=56.0
+istep=68 irk=2 time=56.3
+istep=69 irk=1 time=56.7
+istep=69 irk=2 time=57.1
+istep=70 irk=1 time=57.5
+istep=70 irk=2 time=57.9
+istep=71 irk=1 time=58.3
+istep=71 irk=2 time=58.7
+istep=72 irk=1 time=59.0
+istep=72 irk=2 time=59.4
+istep=73 irk=1 time=59.8
+istep=73 irk=2 time=60.2
+istep=74 irk=1 time=60.6
+istep=74 irk=2 time=60.9
+istep=75 irk=1 time=61.3
+istep=75 irk=2 time=61.7
+istep=76 irk=1 time=62.1
+istep=76 irk=2 time=62.5
+istep=77 irk=1 time=62.9
+istep=77 irk=2 time=63.2
+istep=78 irk=1 time=63.6
+istep=78 irk=2 time=64.0
+istep=79 irk=1 time=64.4
+istep=79 irk=2 time=64.8
+istep=80 irk=1 time=65.2
+istep=80 irk=2 time=65.5
+istep=81 irk=1 time=65.9
+istep=81 irk=2 time=66.3
+istep=82 irk=1 time=66.7
+istep=82 irk=2 time=67.0
+istep=83 irk=1 time=67.4
+istep=83 irk=2 time=67.8
+istep=84 irk=1 time=68.1
+istep=84 irk=2 time=68.4
+istep=85 irk=1 time=68.8
+istep=85 irk=2 time=69.2
+istep=86 irk=1 time=69.6
+istep=86 irk=2 time=70.0
+istep=87 irk=1 time=70.4
+istep=87 irk=2 time=70.7
+istep=88 irk=1 time=71.1
+istep=88 irk=2 time=71.5
+istep=89 irk=1 time=71.9
+istep=89 irk=2 time=72.2
+istep=90 irk=1 time=72.6
+istep=90 irk=2 time=73.0
+istep=91 irk=1 time=73.4
+istep=91 irk=2 time=73.8
+istep=92 irk=1 time=74.1
+istep=92 irk=2 time=74.5
+istep=93 irk=1 time=74.9
+istep=93 irk=2 time=75.3
+istep=94 irk=1 time=75.7
+istep=94 irk=2 time=76.0
+istep=95 irk=1 time=76.4
+istep=95 irk=2 time=76.8
+istep=96 irk=1 time=77.2
+istep=96 irk=2 time=77.5
+istep=97 irk=1 time=77.9
+istep=97 irk=2 time=78.3
+istep=98 irk=1 time=78.7
+istep=98 irk=2 time=79.0
+istep=99 irk=1 time=79.4
+istep=99 irk=2 time=79.8
+istep=100 irk=1 time=80.2
+istep=100 irk=2 time=80.6
+ Checking answers after last time step.... 
+ Skipping error check... could not identify problem size. 

@@ -1,0 +1,72 @@
+--------------------------------------------------------------------------
+WARNING: a request was made to bind a process. While the system
+supports binding the process itself, at least one node does NOT
+support binding memory to the process location.
+
+  Node:  n03
+
+Open MPI uses the "hwloc" library to perform process and memory
+binding. This error message means that hwloc has indicated that
+processor binding support is not available on this machine.
+
+On OS X, processor and memory binding is not available at all (i.e.,
+the OS does not expose this functionality).
+
+On Linux, lack of the functionality can mean that you are on a
+platform where processor and memory affinity is not supported in Linux
+itself, or that hwloc was built without NUMA and/or processor affinity
+support. When building hwloc (which, depending on your Open MPI
+installation, may be embedded in Open MPI itself), it is important to
+have the libnuma header and library files available. Different linux
+distributions package these files under different names; look for
+packages with the word "numa" in them. You may also need a developer
+version of the package (e.g., with "dev" or "devel" in the name) to
+obtain the relevant header files.
+
+If you are getting this message on a non-OS X, non-Linux platform,
+then hwloc does not support processor / memory affinity on this
+platform. If the OS/platform does actually support processor / memory
+affinity, then you should contact the hwloc maintainers:
+https://github.com/open-mpi/hwloc.
+
+This is a warning only; your job will continue, though performance may
+be degraded.
+--------------------------------------------------------------------------
+
+ ... Face creation time:     2.00 seconds ...
+
+ ... Extract BC face and delete ghost time:     0.00 seconds ...
+Start setup communication.
+
+ ... Setup Communcation function time:     0.00 seconds ...
+
+ ... Rest of setup communication time:     0.00 seconds ...
+End setup communication.
+
+ CPU Memory Usage (Current, High Water) - after mesh setup: 133 MB, 220 MB
+ ... Setup time:     2.14 seconds ...
+
+Time Step #100:  Time =  2.000000000e-04; dt =  2.000000000e-06
+
+Time Step #200:  Time =  4.000000000e-04; dt =  2.000000000e-06
+
+Time Step #300:  Time =  6.000000000e-04; dt =  2.000000000e-06
+
+Time Step #400:  Time =  8.000000000e-04; dt =  2.000000000e-06
+
+Time Step #500:  Time =  1.000000000e-03; dt =  2.000000000e-06
+
+Time Step #600:  Time =  1.200000000e-03; dt =  2.000000000e-06
+
+Time Step #700:  Time =  1.400000000e-03; dt =  2.000000000e-06
+
+Time Step #800:  Time =  1.600000000e-03; dt =  2.000000000e-06
+
+Time Step #900:  Time =  1.800000000e-03; dt =  2.000000000e-06
+
+Time Step #1000:  Time =  2.000000000e-03; dt =  2.000000000e-06
+
+ ... Device Run time:   240.33 seconds ...
+
+ CPU Memory Usage (Current, High Water) - end of calculation: 644 MB, 644 MB
+ ... Total elapsed time:   243.10 seconds ...

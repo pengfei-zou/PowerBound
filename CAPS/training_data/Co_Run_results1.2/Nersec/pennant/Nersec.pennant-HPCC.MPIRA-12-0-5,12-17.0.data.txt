@@ -1,0 +1,69 @@
+--------------------------------------------------------------------------
+WARNING: a request was made to bind a process. While the system
+supports binding the process itself, at least one node does NOT
+support binding memory to the process location.
+
+  Node:  n05
+
+Open MPI uses the "hwloc" library to perform process and memory
+binding. This error message means that hwloc has indicated that
+processor binding support is not available on this machine.
+
+On OS X, processor and memory binding is not available at all (i.e.,
+the OS does not expose this functionality).
+
+On Linux, lack of the functionality can mean that you are on a
+platform where processor and memory affinity is not supported in Linux
+itself, or that hwloc was built without NUMA and/or processor affinity
+support. When building hwloc (which, depending on your Open MPI
+installation, may be embedded in Open MPI itself), it is important to
+have the libnuma header and library files available. Different linux
+distributions package these files under different names; look for
+packages with the word "numa" in them. You may also need a developer
+version of the package (e.g., with "dev" or "devel" in the name) to
+obtain the relevant header files.
+
+If you are getting this message on a non-OS X, non-Linux platform,
+then hwloc does not support processor / memory affinity on this
+platform. If the OS/platform does actually support processor / memory
+affinity, then you should contact the hwloc maintainers:
+https://github.com/open-mpi/hwloc.
+
+This is a warning only; your job will continue, though performance may
+be degraded.
+--------------------------------------------------------------------------
+********************
+Running PENNANT v0.9
+********************
+
+Running on 1 MPI PE(s)
+Running on 12 thread(s)
+--- Mesh Information ---
+Points:  232001
+Zones:  230400
+Sides:  921600
+Edges:  462400
+Side chunks:  1800
+Point chunks:  454
+Zone chunks:  450
+Chunk size:  512
+------------------------
+Energy check:  total energy  =   9.424778e-01
+(internal =   9.424778e-01, kinetic =   0.000000e+00)
+End cycle      1, time = 1.00000e-03, dt = 1.00000e-03, wall = 3.42920e-02
+dt limiter: Initial timestep
+End cycle    100, time = 1.80646e-01, dt = 1.50494e-03, wall = 2.19622e+00
+dt limiter: PE 0, Hydro Courant limit for z = 77046
+End cycle    200, time = 3.25140e-01, dt = 1.41462e-03, wall = 2.15547e+00
+dt limiter: PE 0, Hydro Courant limit for z = 77005
+End cycle    300, time = 4.66173e-01, dt = 1.41272e-03, wall = 2.12697e+00
+dt limiter: PE 0, Hydro Courant limit for z = 76997
+End cycle    400, time = 6.08548e-01, dt = 1.43732e-03, wall = 2.12996e+00
+dt limiter: PE 0, Hydro Courant limit for z = 77008
+End cycle    500, time = 7.53605e-01, dt = 1.44100e-03, wall = 2.12788e+00
+dt limiter: PE 0, Hydro dV/V limit for z = 92916
+End cycle    600, time = 9.00922e-01, dt = 1.51731e-03, wall = 2.14445e+00
+dt limiter: PE 0, Hydro Courant limit for z = 76963
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node n05 exited on signal 9 (Killed).
+--------------------------------------------------------------------------

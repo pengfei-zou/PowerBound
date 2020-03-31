@@ -1,0 +1,165 @@
+--------------------------------------------------------------------------
+WARNING: a request was made to bind a process. While the system
+supports binding the process itself, at least one node does NOT
+support binding memory to the process location.
+
+  Node:  n06
+
+Open MPI uses the "hwloc" library to perform process and memory
+binding. This error message means that hwloc has indicated that
+processor binding support is not available on this machine.
+
+On OS X, processor and memory binding is not available at all (i.e.,
+the OS does not expose this functionality).
+
+On Linux, lack of the functionality can mean that you are on a
+platform where processor and memory affinity is not supported in Linux
+itself, or that hwloc was built without NUMA and/or processor affinity
+support. When building hwloc (which, depending on your Open MPI
+installation, may be embedded in Open MPI itself), it is important to
+have the libnuma header and library files available. Different linux
+distributions package these files under different names; look for
+packages with the word "numa" in them. You may also need a developer
+version of the package (e.g., with "dev" or "devel" in the name) to
+obtain the relevant header files.
+
+If you are getting this message on a non-OS X, non-Linux platform,
+then hwloc does not support processor / memory affinity on this
+platform. If the OS/platform does actually support processor / memory
+affinity, then you should contact the hwloc maintainers:
+https://github.com/open-mpi/hwloc.
+
+This is a warning only; your job will continue, though performance may
+be degraded.
+--------------------------------------------------------------------------
+Fri Aug  4 20:29:34 2017: Starting Initialization
+
+
+Mini-Application Name    : CoMD-openmp-mpi
+Mini-Application Version : 1.1
+Platform:
+  hostname: n03
+  kernel name: 'Linux'
+  kernel release: '3.10.0-514.16.1.el7.x86_64'
+  processor: 'x86_64'
+Build:
+  CC: '/usr/local/openmpi-2.0.1/bin/mpicc'
+  compiler version: 'gcc (GCC) 6.2.0'
+  CFLAGS: '-std=c99 -fopenmp -DDOUBLE -DDO_MPI -g -O5   '
+  LDFLAGS: ' -lm '
+  using MPI: true
+  Threading: OpenMP (12 threads) 
+  Double Precision: true
+Run Date/Time: 2017-08-04, 20:29:34
+
+Command Line Parameters:
+  doeam: 0
+  potDir: pots
+  potName: Cu_u6.eam
+  potType: funcfl
+  nx: 100
+  ny: 100
+  nz: 100
+  xproc: 1
+  yproc: 1
+  zproc: 1
+  Lattice constant: -1 Angstroms
+  nSteps: 100
+  printRate: 20
+  Time step: 1 fs
+  Initial Temperature: 600 K
+  Initial Delta: 0 Angstroms
+
+Simulation data: 
+  Total atoms        : 4000000
+  Min global bounds  : [   0.0000000000,   0.0000000000,   0.0000000000 ]
+  Max global bounds  : [ 361.5000000000, 361.5000000000, 361.5000000000 ]
+
+Decomposition data: 
+  Processors         :      1,     1,     1
+  Local boxes        :     62,    62,    62 =   238328
+  Box size           : [   5.8306451613,   5.8306451613,   5.8306451613 ]
+  Box factor         : [   1.0074548875,   1.0074548875,   1.0074548875 ] 
+  Max Link Cell Occupancy: 32 of 64
+
+Potential data: 
+  Potential type   : Lennard-Jones
+  Species name     : Cu
+  Atomic number    : 29
+  Mass             : 63.55 amu
+  Lattice Type     : FCC
+  Lattice spacing  : 3.615 Angstroms
+  Cutoff           : 5.7875 Angstroms
+  Epsilon          : 0.167 eV
+  Sigma            : 2.315 Angstroms
+
+
+Initial energy : -1.166063303468, atom count : 4000000 
+
+Fri Aug  4 20:29:37 2017: Initialization Finished
+
+Fri Aug  4 20:29:37 2017: Starting simulation
+
+#                                                                                         Performance
+#  Loop   Time(fs)       Total Energy   Potential Energy     Kinetic Energy  Temperature   (us/atom)     # Atoms
+      0       0.00    -1.166063303468    -1.243619295068     0.077555991600     600.0000     0.0000      4000000
+     20      20.00    -1.166048438416    -1.208183014318     0.042134575902     325.9677     0.3538      4000000
+     40      40.00    -1.166042093134    -1.183625399859     0.017583306724     136.0305     0.3482      4000000
+     60      60.00    -1.166054646931    -1.202662201513     0.036607554582     283.2087     0.3467      4000000
+     80      80.00    -1.166048803912    -1.203635015020     0.037586211108     290.7799     0.3473      4000000
+    100     100.00    -1.166049793504    -1.206862845060     0.040813051556     315.7439     0.3483      4000000
+Fri Aug  4 20:31:57 2017: Ending simulation
+
+
+
+Simulation Validation:
+  Initial energy  : -1.166063303468
+  Final energy    : -1.166049793504
+  eFinal/eInitial : 0.999988
+  Final atom count : 4000000, no atoms lost
+
+
+Timings for Rank 0
+        Timer        # Calls    Avg/Call (s)   Total (s)    % Loop
+___________________________________________________________________
+total                      1     142.3925      142.3925      102.04
+loop                       1     139.5456      139.5456      100.00
+timestep                   5      27.9089      139.5445      100.00
+  position               100       0.0087        0.8677        0.62
+  velocity               200       0.0072        1.4432        1.03
+  redistribute           101       0.1882       19.0048       13.62
+    atomHalo             101       0.0748        7.5535        5.41
+  force                  101       1.1846      119.6401       85.74
+commHalo                 303       0.0039        1.1750        0.84
+commReduce                24       0.0000        0.0001        0.00
+
+Timing Statistics Across 1 Ranks:
+        Timer        Rank: Min(s)       Rank: Max(s)      Avg(s)    Stdev(s)
+_____________________________________________________________________________
+total                0:  142.3925       0:  142.3925    142.3925      0.0000
+loop                 0:  139.5456       0:  139.5456    139.5456      0.0000
+timestep             0:  139.5445       0:  139.5445    139.5445      0.0000
+  position           0:    0.8677       0:    0.8677      0.8677      0.0000
+  velocity           0:    1.4432       0:    1.4432      1.4432      0.0000
+  redistribute       0:   19.0048       0:   19.0048     19.0048      0.0000
+    atomHalo         0:    7.5535       0:    7.5535      7.5535      0.0000
+  force              0:  119.6401       0:  119.6401    119.6401      0.0000
+commHalo             0:    1.1750       0:    1.1750      1.1750      0.0000
+commReduce           0:    0.0001       0:    0.0001      0.0001      0.0000
+
+---------------------------------------------------
+ Average atom update rate:       0.35 us/atom/task
+---------------------------------------------------
+
+
+---------------------------------------------------
+ Average all atom update rate:   0.35 us/atom
+---------------------------------------------------
+
+
+---------------------------------------------------
+ Average atom rate:              2.87 atoms/us
+---------------------------------------------------
+
+Fri Aug  4 20:31:57 2017: CoMD Ending
+

@@ -1,0 +1,11 @@
+srun: error: Only allocated 2 nodes asked for 4
+[mpiexec@n01] HYDU_sock_write (utils/sock/sock.c:294): write error (Bad file descriptor)
+[mpiexec@n01] HYD_pmcd_pmiserv_send_signal (pm/pmiserv/pmiserv_cb.c:177): unable to write data to proxy
+[mpiexec@n01] ui_cmd_cb (pm/pmiserv/pmiserv_pmci.c:79): unable to send signal downstream
+[mpiexec@n01] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[mpiexec@n01] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:198): error waiting for event
+[mpiexec@n01] main (ui/mpich/mpiexec.c:340): process manager error waiting for completion
+
+real	7m34.028s
+user	0m0.004s
+sys	0m0.003s

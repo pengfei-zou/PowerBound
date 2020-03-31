@@ -1,0 +1,12 @@
+--------------------------------------------------------------------------
+It looks like orte_init failed for some reason; your parallel process is
+likely to abort.  There are many reasons that a parallel process can
+fail during orte_init; some of which are due to configuration or
+environment problems.  This failure appears to be an internal failure;
+here's some additional information (which may only be relevant to an
+Open MPI developer):
+
+  pmix server init failed
+  --> Returned value Error (-1) instead of ORTE_SUCCESS
+--------------------------------------------------------------------------
+../../../../../../openmpi-2.0.1/opal/mca/pmix/pmix112/pmix/src/server/pmix_server_listener.c:92 bind() failed

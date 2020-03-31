@@ -1,0 +1,31 @@
+ 
+   Tea Version    1.402
+       MPI Version
+    OpenMP Version
+   Task Count      4
+ Thread Count:    12
+ 
+Abort(17) on node 0 (rank 0 in comm 0): Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+In: PMI_Abort(17, Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code)
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 4482.8 ON n01 CANCELLED AT 2018-10-06T20:50:39 ***
+Abort(69877135) on node 1 (rank 1 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(392)..............: MPI_Waitall(count=2, req_array=0x7ffe99c955c0, status_array=0x7ffe99c95440) failed
+MPIR_Waitall(214)..............: 
+MPIR_Waitall_impl(60)..........: 
+MPIDI_Progress_test(113).......: 
+MPIDI_OFI_handle_cq_error(1010): OFI poll failed (ofi_events.h:1010:MPIDI_OFI_handle_cq_error:Input/output error)
+srun: error: n01: task 0: Exited with exit code 17
+In: PMI_Abort(69877135, Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(392)..............: MPI_Waitall(count=2, req_array=0x7ffe99c955c0, status_array=0x7ffe99c95440) failed
+MPIR_Waitall(214)..............: 
+MPIR_Waitall_impl(60)..........: 
+MPIDI_Progress_test(113).......: 
+MPIDI_OFI_handle_cq_error(1010): OFI poll failed (ofi_events.h:1010:MPIDI_OFI_handle_cq_error:Input/output error))
+srun: error: n04: task 3: Killed
+srun: error: n02: task 1: Killed
+srun: error: n03: task 2: Killed
+
+real	0m1.181s
+user	0m0.015s
+sys	0m0.013s

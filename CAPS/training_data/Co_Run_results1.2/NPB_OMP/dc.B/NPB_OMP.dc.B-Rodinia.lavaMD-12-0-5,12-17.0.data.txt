@@ -1,0 +1,81 @@
+
+
+ NAS Parallel Benchmarks (NPB3.3-OMP) - DC Benchmark
+
+ No Paramter file. Using compiled defaults
+********************* ADC paramters
+ id		0
+ attributes 	20
+ measures   	1
+ tuples     	10000000
+ class		B
+ filename       ADC
+***********************************
+
+GenerateADC: writing 10000000 tuples of 20 attributes and 1 measures to ADC.dat.0
+Prime 	Generator 	Seed
+ 421	 383		 211
+ 601	 151		 301
+ 631	 562		 316
+ 701	 210		 351
+ 883	 545		 442
+ 419	 334		 210
+ 443	 123		 222
+ 647	 300		 324
+ 21737	 14249		 10869
+ 31769	 21291		 15885
+ 1427	 965		 714
+ 18353	 13735		 9177
+ 22817	 10906		 11409
+ 34337	 7511		 17169
+ 98717	 68726		 49359
+ 3527	 1488		 1764
+ 8693	 16		 4347
+ 9677	 16		 4839
+ 11093	 6741		 5547
+ 18233	 1791		 9117
+Binary ADC file ADC.dat.0 have been generated.
+View sizes are written into ADC.view.sz.0
+Estimated rb-tree size = 1500000000 
+
+Number of available threads:  12
+
+*** DC Benchmark Results:
+ Benchmark Time   =               78.258
+ Input Tuples     =             10000000
+ Number of Views  =                   64
+ Number of Tasks  =                   12
+ Tuples Generated =            595267023
+ Tuples/s         =           7606466.08
+ Checksum         =   9.348365700453e+12
+
+
+ DC Benchmark Completed
+ Class           =                        B
+ Size            =                 10000000
+ Iterations      =                        1
+ Time in seconds =                    78.26
+ Total threads   =                       12
+ Avail threads   =                       12
+ Mop/s total     =                     7.61
+ Mop/s/thread    =                     0.63
+ Operation type  =         Tuples generated
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              04 Jul 2017
+
+ Compile options:
+    CC           = gcc
+    CLINK        = $(CC)
+    C_LIB        = -lm
+    C_INC        = (none)
+    CFLAGS       = -O3 -fopenmp -mcmodel=medium
+    CLINKFLAGS   = -O3 -fopenmp -mcmodel=medium
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+

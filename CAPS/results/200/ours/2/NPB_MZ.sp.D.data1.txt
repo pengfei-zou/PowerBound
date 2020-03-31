@@ -1,0 +1,78 @@
+
+
+ NAS Parallel Benchmarks (NPB3.3-MZ-MPI) - SP-MZ MPI+OpenMP Benchmark
+
+ Reading from input file inputsp-mz.data
+ Number of zones:  32 x  32
+ Iterations:      300    dt:   0.000300
+ Number of active processes:     8
+
+ Use the default load factors with threads
+ Total number of threads:     48  (  6.0 threads/process)
+
+ Calculated speedup =     48.00
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Time step  220
+ Time step  240
+ Time step  260
+ Time step  280
+ Time step  300
+ Verification being performed for class D
+ accuracy setting for epsilon =  0.1000000000000E-07
+ NITER does not match the reference value of   500
+ Comparison of RMS-norms of residual
+ FAILURE:  1 0.1393317694585E+07 0.7650595424723E+06 0.8211885706083E+00
+ FAILURE:  2 0.1005115756481E+06 0.5111519817683E+05 0.9663735881525E+00
+ FAILURE:  3 0.3401065076359E+06 0.1857213937602E+06 0.8312726431238E+00
+ FAILURE:  4 0.3034329828726E+06 0.1624096784059E+06 0.8683183530126E+00
+ FAILURE:  5 0.2964550615891E+07 0.1642416844328E+07 0.8049928226983E+00
+ Comparison of RMS-norms of solution error
+ FAILURE:  1 0.1472362144093E+06 0.8169589578340E+05 0.8022473833894E+00
+ FAILURE:  2 0.9681533750557E+04 0.5252150843148E+04 0.8433464764608E+00
+ FAILURE:  3 0.3577915785145E+05 0.1984739188642E+05 0.8027133265770E+00
+ FAILURE:  4 0.3074150447254E+05 0.1662852404547E+05 0.8487211726353E+00
+ FAILURE:  5 0.3168682634293E+06 0.1761381855235E+06 0.7989754038145E+00
+ Verification failed
+
+
+ SP-MZ Benchmark Completed.
+ Class           =                        D
+ Size            =           1632x 1216x 34
+ Iterations      =                      300
+ Time in seconds =                   382.13
+ Total processes =                        8
+ Total threads   =                       48
+ Mop/s total     =                 40809.46
+ Mop/s/thread    =                   850.20
+ Operation type  =           floating point
+ Verification    =             UNSUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              03 Oct 2018
+
+ Compile options:
+    F77          = mpiifort
+    FLINK        = $(F77)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -qopenmp -mcmodel=medium
+    FLINKFLAGS   = -O3 -qopenmp -mcmodel=medium
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+

@@ -1,0 +1,282 @@
+--------------------------------------------------------------------------
+WARNING: a request was made to bind a process. While the system
+supports binding the process itself, at least one node does NOT
+support binding memory to the process location.
+
+  Node:  n07
+
+Open MPI uses the "hwloc" library to perform process and memory
+binding. This error message means that hwloc has indicated that
+processor binding support is not available on this machine.
+
+On OS X, processor and memory binding is not available at all (i.e.,
+the OS does not expose this functionality).
+
+On Linux, lack of the functionality can mean that you are on a
+platform where processor and memory affinity is not supported in Linux
+itself, or that hwloc was built without NUMA and/or processor affinity
+support. When building hwloc (which, depending on your Open MPI
+installation, may be embedded in Open MPI itself), it is important to
+have the libnuma header and library files available. Different linux
+distributions package these files under different names; look for
+packages with the word "numa" in them. You may also need a developer
+version of the package (e.g., with "dev" or "devel" in the name) to
+obtain the relevant header files.
+
+If you are getting this message on a non-OS X, non-Linux platform,
+then hwloc does not support processor / memory affinity on this
+platform. If the OS/platform does actually support processor / memory
+affinity, then you should contact the hwloc maintainers:
+https://github.com/open-mpi/hwloc.
+
+This is a warning only; your job will continue, though performance may
+be degraded.
+--------------------------------------------------------------------------
+Running in parallel with 12 processes
+Random seed: 1501848771
+D scale of 2.0
+Matrix: RIBOSUM85-60
+Alpha: 10.00
+Beta: 5.00
+Alpha': 0.00
+Beta': 15.00
+Query file: ./datasets/rsearch/Queries/mir-40.stk
+Database file: ./datasets/rsearch/Databasefile/100Kdb.fa
+
+
+beginsc = 0.000000
+endsc = -15.000000
+Making histogram cost 14.2 seconds
+Statistics calculated with simulation of 1000 samples of length 388
+No partition points
+GC = 0	lambda = 0.2749	mu = 51.3872
+GC = 1	Making histogram cost 14.2 seconds
+Making histogram cost 14.2 seconds
+Making histogram cost 14.2 seconds
+Making histogram cost 14.2 seconds
+Making histogram cost 14.2 seconds
+Making histogram cost 14.2 seconds
+Making histogram cost 14.2 seconds
+Making histogram cost 14.2 seconds
+Making histogram cost 14.2 seconds
+Making histogram cost 14.2 seconds
+Making histogram cost 14.2 seconds
+lambda = 0.2749	mu = 51.3872
+GC = 2	lambda = 0.2749	mu = 51.3872
+GC = 3	lambda = 0.2749	mu = 51.3872
+GC = 4	lambda = 0.2749	mu = 51.3872
+GC = 5	lambda = 0.2749	mu = 51.3872
+GC = 6	lambda = 0.2749	mu = 51.3872
+GC = 7	lambda = 0.2749	mu = 51.3872
+GC = 8	lambda = 0.2749	mu = 51.3872
+GC = 9	lambda = 0.2749	mu = 51.3872
+GC = 10	lambda = 0.2749	mu = 51.3872
+GC = 11	lambda = 0.2749	mu = 51.3872
+GC = 12	lambda = 0.2749	mu = 51.3872
+GC = 13	lambda = 0.2749	mu = 51.3872
+GC = 14	lambda = 0.2749	mu = 51.3872
+GC = 15	lambda = 0.2749	mu = 51.3872
+GC = 16	lambda = 0.2749	mu = 51.3872
+GC = 17	lambda = 0.2749	mu = 51.3872
+GC = 18	lambda = 0.2749	mu = 51.3872
+GC = 19	lambda = 0.2749	mu = 51.3872
+GC = 20	lambda = 0.2749	mu = 51.3872
+GC = 21	lambda = 0.2749	mu = 51.3872
+GC = 22	lambda = 0.2749	mu = 51.3872
+GC = 23	lambda = 0.2749	mu = 51.3872
+GC = 24	lambda = 0.2749	mu = 51.3872
+GC = 25	lambda = 0.2749	mu = 51.3872
+GC = 26	lambda = 0.2749	mu = 51.3872
+GC = 27	lambda = 0.2749	mu = 51.3872
+GC = 28	lambda = 0.2749	mu = 51.3872
+GC = 29	lambda = 0.2749	mu = 51.3872
+GC = 30	lambda = 0.2749	mu = 51.3872
+GC = 31	lambda = 0.2749	mu = 51.3872
+GC = 32	lambda = 0.2749	mu = 51.3872
+GC = 33	lambda = 0.2749	mu = 51.3872
+GC = 34	lambda = 0.2749	mu = 51.3872
+GC = 35	lambda = 0.2749	mu = 51.3872
+GC = 36	lambda = 0.2749	mu = 51.3872
+GC = 37	lambda = 0.2749	mu = 51.3872
+GC = 38	lambda = 0.2749	mu = 51.3872
+GC = 39	lambda = 0.2749	mu = 51.3872
+GC = 40	lambda = 0.2749	mu = 51.3872
+GC = 41	lambda = 0.2749	mu = 51.3872
+GC = 42	lambda = 0.2749	mu = 51.3872
+GC = 43	lambda = 0.2749	mu = 51.3872
+GC = 44	lambda = 0.2749	mu = 51.3872
+GC = 45	lambda = 0.2749	mu = 51.3872
+GC = 46	lambda = 0.2749	mu = 51.3872
+GC = 47	lambda = 0.2749	mu = 51.3872
+GC = 48	lambda = 0.2749	mu = 51.3872
+GC = 49	lambda = 0.2749	mu = 51.3872
+GC = 50	lambda = 0.2749	mu = 51.3872
+GC = 51	lambda = 0.2749	mu = 51.3872
+GC = 52	lambda = 0.2749	mu = 51.3872
+GC = 53	lambda = 0.2749	mu = 51.3872
+GC = 54	lambda = 0.2749	mu = 51.3872
+GC = 55	lambda = 0.2749	mu = 51.3872
+GC = 56	lambda = 0.2749	mu = 51.3872
+GC = 57	lambda = 0.2749	mu = 51.3872
+GC = 58	lambda = 0.2749	mu = 51.3872
+GC = 59	lambda = 0.2749	mu = 51.3872
+GC = 60	lambda = 0.2749	mu = 51.3872
+GC = 61	lambda = 0.2749	mu = 51.3872
+GC = 62	lambda = 0.2749	mu = 51.3872
+GC = 63	lambda = 0.2749	mu = 51.3872
+GC = 64	lambda = 0.2749	mu = 51.3872
+GC = 65	lambda = 0.2749	mu = 51.3872
+GC = 66	lambda = 0.2749	mu = 51.3872
+GC = 67	lambda = 0.2749	mu = 51.3872
+GC = 68	lambda = 0.2749	mu = 51.3872
+GC = 69	lambda = 0.2749	mu = 51.3872
+GC = 70	lambda = 0.2749	mu = 51.3872
+GC = 71	lambda = 0.2749	mu = 51.3872
+GC = 72	lambda = 0.2749	mu = 51.3872
+GC = 73	lambda = 0.2749	mu = 51.3872
+GC = 74	lambda = 0.2749	mu = 51.3872
+GC = 75	lambda = 0.2749	mu = 51.3872
+GC = 76	lambda = 0.2749	mu = 51.3872
+GC = 77	lambda = 0.2749	mu = 51.3872
+GC = 78	lambda = 0.2749	mu = 51.3872
+GC = 79	lambda = 0.2749	mu = 51.3872
+GC = 80	lambda = 0.2749	mu = 51.3872
+GC = 81	lambda = 0.2749	mu = 51.3872
+GC = 82	lambda = 0.2749	mu = 51.3872
+GC = 83	lambda = 0.2749	mu = 51.3872
+GC = 84	lambda = 0.2749	mu = 51.3872
+GC = 85	lambda = 0.2749	mu = 51.3872
+GC = 86	lambda = 0.2749	mu = 51.3872
+GC = 87	lambda = 0.2749	mu = 51.3872
+GC = 88	lambda = 0.2749	mu = 51.3872
+GC = 89	lambda = 0.2749	mu = 51.3872
+GC = 90	lambda = 0.2749	mu = 51.3872
+GC = 91	lambda = 0.2749	mu = 51.3872
+GC = 92	lambda = 0.2749	mu = 51.3872
+GC = 93	lambda = 0.2749	mu = 51.3872
+GC = 94	lambda = 0.2749	mu = 51.3872
+GC = 95	lambda = 0.2749	mu = 51.3872
+GC = 96	lambda = 0.2749	mu = 51.3872
+GC = 97	lambda = 0.2749	mu = 51.3872
+GC = 98	lambda = 0.2749	mu = 51.3872
+GC = 99	lambda = 0.2749	mu = 51.3872
+GC = 100	lambda = 0.2749	mu = 51.3872
+N = 235320
+Using E cutoff of 10.00
+>ref|NC_001133|
+
+  Plus strand results:
+
+ Query = 1 - 98, Target = 117001 - 117097
+ Score = 220.04, E = 7.355e-21, P = 7.355e-21
+
+           ::::::<<<<<<<<<<<<<-<<<-<<<<<<<<<<-<<-<<<<<-<<<_______>>>->>
+         1 GAACCUCCUGUCCGCACCUCAGUGGAUGUAUGCCAUGAUGAUAAGAUAUCAGAAAUCCUA 60      
+           GAACCUCCUGUCCGCACCUCAGUGGAUGUAUGCCAUGAUGAUAAGAUAUCAGAAAUCCUA
+         1 GAACCUCCUGUCCGCACCUCAGUGGAUGUAUGCCAUGAUGAUAAGAUAUCAGAAAUCCUA 60      
+
+           >>>->>>>>>>>>>>>->>>->>>>>>>>-->>>>>:
+        61 UCACCGGGUGUACAUCAGCUAAGGUGCGGGUACAGGU 97      
+           UCACCGGGUGUACAUCAGCUAAGGUGCGGGUACAGGU
+        61 UCACCGGGUGUACAUCAGCUAAGGUGCGGGUACAGGU 97      
+
+
+ Query = 7 - 96, Target = 81056 - 81150
+ Score = 67.78, E = 0.01104, P = 0.01098
+
+           <<<<<<<.<<<<<<-<<<-<.<<<<<<<.<.<-<<-<<<<<-<<<_______>>>->>>>
+         7 CCUGUCC.GCACCUCAGUGG.AUGUAUG.C.CAUGAUGAUAAGAUAUCAGAAAUCCUAUC 62      
+           +CUG ++  + +++C++UG+ A++U+UG + +AU+ UGA++AG  AUCA  A UC ++UC
+         1 UCUGGUAaUUUUUUCCAUGAgACGUUUGgUaUAUAUUGAGGAG-CAUCAUGAAUCGCCUC 59      
+
+           >->>>>>>.>>>>>>->>>->>>>>>>>-->.>>>>
+        63 ACCGGGUG.UACAUCAGCUAAGGUGCGGGUA.CAGG 96      
+           A +G++UG +A++U+AG++ +++ + ++G   CAG+
+        60 AAUGGAUGcAAUGUUAGUGUGAGGAGUGGAUgCAGA 95      
+
+
+ Query = 7 - 97, Target = 25390 - 25568
+ Score = 50.55, E = 1.259, P = 0.716
+
+           <<<<<<<<<<<<<-<<<-<<<<<<<<<<.-<<-<<<.<<-<<<_____~~~~~~>>>->>
+         7 CCUGUCCGCACCUCAGUGGAUGUAUGCC.AUGAUGA.UAAGAUAUCAG*[ 3]*AUCCUA 60      
+           +++G+++GCA +U ++UGGA  U UG+C AU+AUGA ++ ++ AUCAG       ++C++
+         1 UGAGAUGGCA-GUAGUUGGAGUUUUGACaAUAAUGAcAGUUUCAUCAG*[89]*AAACCU 142     
+
+           >>>->>>>>>>>>>>>->>>->>>.>>>.>>-->>>>>:
+        61 UCACCGGGUGUACAUCAGCUAAGG.UGC.GGGUACAGGU 97      
+           UCAC+GG+UG A  UC G++AA+  U C ++GU+ +++U
+       143 UCACUGGUUGGAGUUCUGAUAACAaU-CaCGGUU-UCGU 179     
+
+
+ Query = 10 - 93, Target = 37265 - 37359
+ Score = 45.97, E = 4.433, P = 0.9881
+
+           <<<<<<<<<.<-<<<-<<<<<<<<<<-<<-<<<<<-<<~~~~~~>>->>>>>->..>>>>
+        10 GUCCGCACC.UCAGUGGAUGUAUGCCAUGAUGAUAAGA*[ 9]*UCCUAUCACC..GGGU 69      
+           +U++++  + U +++G+AUG+AU+C+A++AU+++AA+A      U+ U+++A +  ++G+
+         1 AUUUUUUAUaUAUCUGGAUGUAUACUAUUAUUGAAAAA*[19]*UUUUUCAAUAucAAGU 73      
+
+           >>>>>>>->>>->>>>>>>>-->>
+        70 GUACAUCAGCUAAGGUGCGGGUAC 93      
+            U+ AU+A+++AA+  ++++ UA+
+        74 -UG-AUUAAGAAAAAGAAAAUUAU 95      
+
+
+  Minus strand results:
+
+ Query = 12 - 89, Target = 117089 - 117012
+ Score = 94.29, E = 7.557e-06, P = 7.557e-06
+
+           <<<<<<<<-<<<-<<<<<<<<<<-<<-<<<<<-<<<_______>>>->>>>>->.>>>>>
+        12 CCGCACCUCAGUGGAUGUAUGCCAUGAUGAUAAGAUAUCAGAAAUCCUAUCACC.GGGUG 70      
+           CCGCACCU AG  GAUGUA  CC  G UGAUA GAU UC GA AUC UAUCA C  GG  
+         1 CCGCACCUUAGCUGAUGUACACCC-GGUGAUAGGAUUUCUGAUAUCUUAUCAUCaUGGCA 59      
+
+           >>>>>>->>>->>>>>>>>
+        71 UACAUCAGCUAAGGUGCGG 89      
+           UACAUC  CU AGGUGCGG
+        60 UACAUCCACUGAGGUGCGG 78      
+
+
+ Query = 5 - 98, Target = 71028 - 70843
+ Score = 48.22, E = 2.388, P = 0.9082
+
+           ::<<<<<<<<<<.<<<-<<<-<<<<<<<<<.<-<<-<<<<~~~~~~~>>>>->>>>>>>>
+         5 CUCCUGUCCGCA.CCUCAGUGGAUGUAUGC.CAUGAUGAU*[ 17]*AUCACCGGGUGUA 72      
+           CU++U+U++ C  CCU A++ ++U+U++ + + ++A+++U       A+++ ++++ ++A
+         1 CUAUUUUUUUCUuCCUUAUUAUUUUUUUAGuUCUGAAGUU*[108]*AAUUUUAAC-AAA 160     
+
+           >>>>->>>->>>>>>>>-->>.>>>:
+        73 CAUCAGCUAAGGUGCGGGUAC.AGGU 97      
+           +A++A++UAAGG G ++  A+ A++U
+       161 AAAAAAAUAAGGGGGGAAAAAuAAUU 186     
+
+
+ Query = 2 - 98, Target = 17378 - 17272
+ Score = 43.93, E = 7.766, P = 0.9996
+
+           :::::<<<.<<<<.<<<<<<-<<<-<<<<.<<<<<<-<<-<<...<<<-<<<_______>
+         2 AACCUCCU.GUCC.GCACCUCAGUGGAUG.UAUGCCAUGAUG...AUAAGAUAUCAGAAA 55      
+           AAC  +++ +U+C  +A+C C+++G+A++ +AU++C U+A G   AUA ++U  CA  AA
+         1 AACGAAUAaAUACcUUAUCUCUUUGAACAgAAUAUCUUAAAGggcAUACAGUCGCAAUAA 60      
+
+           >.>->>.>>>->>>.>>>>.>.>>>>->>>->>>>>>>>-->>>>>:
+        56 U.CCUA.UCACCGG.GUGU.A.CAUCAGCUAAGGUGCGGGUACAGGU 97      
+           + +CUA UC  +GG ++GU + ++U+A+++A G+U+ G+ UA++++ 
+        61 CgUCUAcUCAUUGGuGUGUgUgUGUUAAAAACGGUAUGUUUAUUAUC 107     
+
+
+we cost 26.3 seconds totally, 14.2 for making histogram
+we cost 26.3 seconds totally, 14.2 for making histogram
+we cost 26.3 seconds totally, 14.2 for making histogram
+we cost 26.3 seconds totally, 14.2 for making histogram
+we cost 26.3 seconds totally, 14.2 for making histogram
+we cost 26.3 seconds totally, 14.2 for making histogram
+we cost 26.3 seconds totally, 14.2 for making histogram
+we cost 26.3 seconds totally, 14.2 for making histogram
+we cost 26.3 seconds totally, 14.2 for making histogram
+we cost 26.3 seconds totally, 14.2 for making histogram
+we cost 26.3 seconds totally, 14.2 for making histogram
+we cost 26.3 seconds totally, 14.2 for making histogram
+Fin

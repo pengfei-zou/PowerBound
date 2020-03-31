@@ -1,0 +1,174 @@
+--------------------------------------------------------------------------
+WARNING: a request was made to bind a process. While the system
+supports binding the process itself, at least one node does NOT
+support binding memory to the process location.
+
+  Node:  n08
+
+Open MPI uses the "hwloc" library to perform process and memory
+binding. This error message means that hwloc has indicated that
+processor binding support is not available on this machine.
+
+On OS X, processor and memory binding is not available at all (i.e.,
+the OS does not expose this functionality).
+
+On Linux, lack of the functionality can mean that you are on a
+platform where processor and memory affinity is not supported in Linux
+itself, or that hwloc was built without NUMA and/or processor affinity
+support. When building hwloc (which, depending on your Open MPI
+installation, may be embedded in Open MPI itself), it is important to
+have the libnuma header and library files available. Different linux
+distributions package these files under different names; look for
+packages with the word "numa" in them. You may also need a developer
+version of the package (e.g., with "dev" or "devel" in the name) to
+obtain the relevant header files.
+
+If you are getting this message on a non-OS X, non-Linux platform,
+then hwloc does not support processor / memory affinity on this
+platform. If the OS/platform does actually support processor / memory
+affinity, then you should contact the hwloc maintainers:
+https://github.com/open-mpi/hwloc.
+
+This is a warning only; your job will continue, though performance may
+be degraded.
+--------------------------------------------------------------------------
+   *WARNING: PINIT_OMP: NTHREADS>MAX_THREADS; reset to MAX_THREADS 
+
+          keyword Iteration Monitor
+********************************************************************************
+
+ ******************************
+  Time Cycle   1
+  Outer
+    1    Dfmxo= 6.2510E-01    No. Inners=  210
+    2    Dfmxo= 1.7527E+09    No. Inners=  210
+    3    Dfmxo= 1.3325E+01    No. Inners=  205
+    4    Dfmxo= 8.6003E-01    No. Inners=  199
+    5    Dfmxo= 2.3330E-01    No. Inners=  167
+    6    Dfmxo= 7.0584E-02    No. Inners=  158
+    7    Dfmxo= 2.0282E-02    No. Inners=  126
+    8    Dfmxo= 6.0723E-03    No. Inners=  111
+    9    Dfmxo= 1.6500E-03    No. Inners=   42
+
+  Cycle=   1    Time= 5.0000E-02    No. Outers=   9    No. Inners= 1428
+
+ ******************************
+  Time Cycle   2
+  Outer
+    1    Dfmxo= 1.0346E+00    No. Inners=  210
+    2    Dfmxo= 2.1464E+02    No. Inners=  208
+    3    Dfmxo= 1.6894E+00    No. Inners=  206
+    4    Dfmxo= 3.0587E-01    No. Inners=  196
+    5    Dfmxo= 8.8153E-02    No. Inners=  163
+    6    Dfmxo= 2.5068E-02    No. Inners=  131
+    7    Dfmxo= 6.4113E-03    No. Inners=  113
+    8    Dfmxo= 1.4746E-03    No. Inners=   42
+
+  Cycle=   2    Time= 1.5000E-01    No. Outers=   8    No. Inners= 1269
+
+ ******************************
+  Time Cycle   3
+  Outer
+    1    Dfmxo= 9.5909E-01    No. Inners=  210
+    2    Dfmxo= 3.7115E+00    No. Inners=  207
+    3    Dfmxo= 6.9442E-01    No. Inners=  206
+    4    Dfmxo= 1.7825E-01    No. Inners=  189
+    5    Dfmxo= 4.5327E-02    No. Inners=  146
+    6    Dfmxo= 1.1020E-02    No. Inners=  124
+    7    Dfmxo= 2.5219E-03    No. Inners=   83
+    8    Dfmxo= 5.3476E-04    No. Inners=   42
+
+  Cycle=   3    Time= 2.5000E-01    No. Outers=   8    No. Inners= 1207
+
+ ******************************
+  Time Cycle   4
+  Outer
+    1    Dfmxo= 1.0882E+00    No. Inners=  210
+    2    Dfmxo= 1.7815E+00    No. Inners=  207
+    3    Dfmxo= 2.8149E-01    No. Inners=  205
+    4    Dfmxo= 7.6842E-02    No. Inners=  173
+    5    Dfmxo= 1.9606E-02    No. Inners=  133
+    6    Dfmxo= 4.5738E-03    No. Inners=   95
+    7    Dfmxo= 9.7880E-04    No. Inners=   42
+
+  Cycle=   4    Time= 3.5000E-01    No. Outers=   7    No. Inners= 1065
+
+ ******************************
+  Time Cycle   5
+  Outer
+    1    Dfmxo= 1.2136E+00    No. Inners=  210
+    2    Dfmxo= 1.5089E+00    No. Inners=  207
+    3    Dfmxo= 1.8285E-01    No. Inners=  206
+    4    Dfmxo= 4.6268E-02    No. Inners=  166
+    5    Dfmxo= 1.0810E-02    No. Inners=  126
+    6    Dfmxo= 2.2760E-03    No. Inners=   84
+    7    Dfmxo= 4.5183E-04    No. Inners=   42
+
+  Cycle=   5    Time= 4.5000E-01    No. Outers=   7    No. Inners= 1041
+
+ ******************************
+  Time Cycle   6
+  Outer
+    1    Dfmxo= 1.3265E+00    No. Inners=  210
+    2    Dfmxo= 8.0407E-01    No. Inners=  208
+    3    Dfmxo= 1.2941E-01    No. Inners=  203
+    4    Dfmxo= 2.8125E-02    No. Inners=  167
+    5    Dfmxo= 5.9877E-03    No. Inners=  125
+    6    Dfmxo= 1.1737E-03    No. Inners=   42
+
+  Cycle=   6    Time= 5.5000E-01    No. Outers=   6    No. Inners=  955
+
+ ******************************
+  Time Cycle   7
+  Outer
+    1    Dfmxo= 1.5200E+00    No. Inners=  210
+    2    Dfmxo= 6.3176E-01    No. Inners=  209
+    3    Dfmxo= 1.0516E-01    No. Inners=  205
+    4    Dfmxo= 1.7684E-02    No. Inners=  167
+    5    Dfmxo= 4.2098E-03    No. Inners=  125
+    6    Dfmxo= 6.5558E-04    No. Inners=   42
+
+  Cycle=   7    Time= 6.5000E-01    No. Outers=   6    No. Inners=  958
+
+ ******************************
+  Time Cycle   8
+  Outer
+    1    Dfmxo= 1.7374E+00    No. Inners=  210
+    2    Dfmxo= 5.9496E-01    No. Inners=  207
+    3    Dfmxo= 7.6592E-02    No. Inners=  205
+    4    Dfmxo= 1.6147E-02    No. Inners=  165
+    5    Dfmxo= 3.2968E-03    No. Inners=  126
+    6    Dfmxo= 6.2338E-04    No. Inners=   42
+
+  Cycle=   8    Time= 7.5000E-01    No. Outers=   6    No. Inners=  955
+
+ ******************************
+  Time Cycle   9
+  Outer
+    1    Dfmxo= 1.9328E+00    No. Inners=  210
+    2    Dfmxo= 5.2218E-01    No. Inners=  208
+    3    Dfmxo= 7.1678E-02    No. Inners=  205
+    4    Dfmxo= 1.4220E-02    No. Inners=  166
+    5    Dfmxo= 2.7438E-03    No. Inners=  123
+    6    Dfmxo= 4.8979E-04    No. Inners=   42
+
+  Cycle=   9    Time= 8.5000E-01    No. Outers=   6    No. Inners=  954
+
+ ******************************
+  Time Cycle  10
+  Outer
+    1    Dfmxo= 2.1076E+00    No. Inners=  210
+    2    Dfmxo= 5.3126E-01    No. Inners=  208
+    3    Dfmxo= 7.6546E-02    No. Inners=  204
+    4    Dfmxo= 1.4144E-02    No. Inners=  166
+    5    Dfmxo= 2.8814E-03    No. Inners=  124
+    6    Dfmxo= 6.4039E-04    No. Inners=   42
+
+  Cycle=  10    Time= 9.5000E-01    No. Outers=   6    No. Inners=  954
+
+ ******************************
+  Total inners for all time steps, outers =  10786
+
+********************************************************************************
+
+ Success! Done in a SNAP!

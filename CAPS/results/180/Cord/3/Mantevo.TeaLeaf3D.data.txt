@@ -1,0 +1,277 @@
+ 
+   Tea Version    1.200
+       MPI Version
+    OpenMP Version
+   Task Count      4
+ Thread Count:    24
+ 
+ Tea will run from the following input:-
+ 
+*tea                                                                                                
+!Input state                                                                                        
+state 1 density=100.0 energy=0.0001                                                                 
+state 2 density=0.1 energy=25.0 geometry=cuboid xmin=1.0 xmax=2.0 ymin=1.0 ymax=2.0 zmin=0.0 zmax=1.
+state 3 density=0.1 energy=0.1 geometry=cuboid xmin=1.0 xmax=2.0 ymin=1.0 ymax=2.0 zmin=1.0 zmax=6.0
+state 4 density=0.1 energy=0.1 geometry=cuboid xmin=2.0 xmax=6.0 ymin=1.0 ymax=2.0 zmin=5.0 zmax=6.0
+state 5 density=0.1 energy=0.1 geometry=cuboid xmin=5.0 xmax=6.0 ymin=1.0 ymax=8.0 zmin=5.0 zmax=6.0
+state 6 density=0.1 energy=0.1 geometry=cuboid xmin=5.0 xmax=9.0 ymin=7.0 ymax=8.0 zmin=5.0 zmax=6.0
+state 7 density=0.1 energy=0.1 geometry=cuboid xmin=8.0 xmax=9.0 ymin=7.0 ymax=8.0 zmin=5.0 zmax=10.
+                                                                                                    
+! Grid information                                                                                  
+x_cells=512                                                                                         
+y_cells=512                                                                                         
+z_cells=512                                                                                         
+xmin=0.0                                                                                            
+ymin=0.0                                                                                            
+zmin=0.0                                                                                            
+xmax=10.0                                                                                           
+ymax=10.0                                                                                           
+zmax=10.0                                                                                           
+                                                                                                    
+! Timestep and solver info                                                                          
+initial_timestep=0.004                                                                              
+end_step=12                                                                                         
+tl_max_iters=10000                                                                                  
+!test_problem 1                                                                                     
+tl_use_ppcg                                                                                         
+tl_preconditioner_type = jac_block                                                                  
+tl_eps=1.0e-15                                                                                      
+*tea                                                                                                
+ 
+ Initialising and generating
+ 
+ Reading input file
+ 
+ Reading specification for state            1
+ 
+            state density   0.1000E+03
+             state energy   0.1000E-03
+ 
+ Reading specification for state            2
+ 
+            state density   0.1000E+00
+             state energy   0.2500E+02
+ state geometry rectangular
+               state xmin   0.1000E+01
+               state xmax   0.2000E+01
+               state ymin   0.1000E+01
+               state ymax   0.2000E+01
+               state zmin   0.0000E+00
+               state zmax   0.1000E+01
+ 
+ Reading specification for state            3
+ 
+            state density   0.1000E+00
+             state energy   0.1000E+00
+ state geometry rectangular
+               state xmin   0.1000E+01
+               state xmax   0.2000E+01
+               state ymin   0.1000E+01
+               state ymax   0.2000E+01
+               state zmin   0.1000E+01
+               state zmax   0.6000E+01
+ 
+ Reading specification for state            4
+ 
+            state density   0.1000E+00
+             state energy   0.1000E+00
+ state geometry rectangular
+               state xmin   0.2000E+01
+               state xmax   0.6000E+01
+               state ymin   0.1000E+01
+               state ymax   0.2000E+01
+               state zmin   0.5000E+01
+               state zmax   0.6000E+01
+ 
+ Reading specification for state            5
+ 
+            state density   0.1000E+00
+             state energy   0.1000E+00
+ state geometry rectangular
+               state xmin   0.5000E+01
+               state xmax   0.6000E+01
+               state ymin   0.1000E+01
+               state ymax   0.8000E+01
+               state zmin   0.5000E+01
+               state zmax   0.6000E+01
+ 
+ Reading specification for state            6
+ 
+            state density   0.1000E+00
+             state energy   0.1000E+00
+ state geometry rectangular
+               state xmin   0.5000E+01
+               state xmax   0.9000E+01
+               state ymin   0.7000E+01
+               state ymax   0.8000E+01
+               state zmin   0.5000E+01
+               state zmax   0.6000E+01
+ 
+ Reading specification for state            7
+ 
+            state density   0.1000E+00
+             state energy   0.1000E+00
+ state geometry rectangular
+               state xmin   0.8000E+01
+               state xmax   0.9000E+01
+               state ymin   0.7000E+01
+               state ymax   0.8000E+01
+               state zmin   0.5000E+01
+               state zmax   0.1000E+02
+ 
+                   x_cells         512
+                   y_cells         512
+                   z_cells         512
+                      xmin  0.0000E+00
+                      ymin  0.0000E+00
+                      zmin  0.0000E+00
+                      xmax  0.1000E+02
+                      ymax  0.1000E+02
+                      zmax  0.1000E+02
+         initial_timestep   0.4000E-02
+                  end_step          12
+    tl_preconditioner_type  jac_block                
+       tl_ppcg_inner_steps          40
+ 
+ Using Fortran Kernels
+ 
+ Input read finished.
+ 
+ Setting up initial geometry
+ 
+ 
+ Decomposing the mesh into            2  by            2  by            1  chunk
+ s
+ 
+ Generating chunks
+ 
+ Problem initialised and generated
+ 
+ Time   0.000000000000000E+000
+                                 Volume                      Mass                   Density                    Energy                         U
+ step:      0   0.10000000000000000E+04   0.97631143486499786E+05   0.97631143486499781E+02   0.12558387517929077E+02   0.97656727361679077E+03
+ 
+ Starting the calculation
+ Step       1 time   0.0000000 timestep   4.00E-03
+Switching after  80 CG its, error   0.7827579E+00
+Eigen min  0.245053E-02 Eigen max  0.209652E+01 Condition number    855.540674 Error  0.884736E+00
+Conduction error  0.3484640E-15
+Iteration count       88
+PPCG Iteration count     440 (Total      528)
+ Wall clock    64.1850528717041     
+ Average time per cell   2.448465456836857E-004
+ Step time per cell      2.448465456836857E-004
+ Step       2 time   0.0040000 timestep   4.00E-03
+Switching after   2 CG its, error   0.1795139E+03
+Eigen min  0.245053E-02 Eigen max  0.209652E+01 Condition number    855.540674 Error  0.133983E+02
+Conduction error  0.3630999E-15
+Iteration count       13
+PPCG Iteration count     560 (Total      573)
+ Wall clock    132.554848909378     
+ Average time per cell   2.528283098399697E-004
+ Step time per cell      2.608092836453579E-004
+ Step       3 time   0.0080000 timestep   4.00E-03
+Switching after   2 CG its, error   0.1506943E+02
+Eigen min  0.245053E-02 Eigen max  0.209652E+01 Condition number    855.540674 Error  0.388194E+01
+Conduction error  0.7465371E-15
+Iteration count       13
+PPCG Iteration count     560 (Total      573)
+ Wall clock    200.367194890976     
+ Average time per cell   2.547800634905191E-004
+ Step time per cell      2.586828877610969E-004
+ Step       4 time   0.0120000 timestep   4.00E-03
+Switching after   2 CG its, error   0.7054018E+01
+Eigen min  0.245053E-02 Eigen max  0.209652E+01 Condition number    855.540674 Error  0.265594E+01
+Conduction error  0.7323614E-15
+Iteration count       13
+PPCG Iteration count     560 (Total      573)
+ Wall clock    264.809118986130     
+ Average time per cell   2.525416555272386E-004
+ Step time per cell      2.458257749822224E-004
+ Step       5 time   0.0160000 timestep   4.00E-03
+Switching after   2 CG its, error   0.4505966E+01
+Eigen min  0.245053E-02 Eigen max  0.209652E+01 Condition number    855.540674 Error  0.212273E+01
+Conduction error  0.6365419E-15
+Iteration count       13
+PPCG Iteration count     560 (Total      573)
+ Wall clock    329.704727888107     
+ Average time per cell   2.515447447876795E-004
+ Step time per cell      2.475563996995334E-004
+ Step       6 time   0.0200000 timestep   4.00E-03
+Switching after   2 CG its, error   0.3267595E+01
+Eigen min  0.245053E-02 Eigen max  0.209652E+01 Condition number    855.540674 Error  0.180765E+01
+Conduction error  0.5647888E-15
+Iteration count       13
+PPCG Iteration count     560 (Total      573)
+ Wall clock    395.712218046188     
+ Average time per cell   2.515870526925331E-004
+ Step time per cell      2.517979091862799E-004
+ Step       7 time   0.0240000 timestep   4.00E-03
+Switching after   2 CG its, error   0.2524527E+01
+Eigen min  0.245053E-02 Eigen max  0.209652E+01 Condition number    855.540674 Error  0.158888E+01
+Conduction error  0.5099278E-15
+Iteration count       13
+PPCG Iteration count     560 (Total      573)
+ Wall clock    461.260586023331     
+ Average time per cell   2.513670708919692E-004
+ Step time per cell      2.500464897821075E-004
+ Step       8 time   0.0280000 timestep   4.00E-03
+Switching after   2 CG its, error   0.2021210E+01
+Eigen min  0.245053E-02 Eigen max  0.209652E+01 Condition number    855.540674 Error  0.142169E+01
+Conduction error  0.4445804E-15
+Iteration count       13
+PPCG Iteration count     560 (Total      573)
+ Wall clock    527.191666841507     
+ Average time per cell   2.513845762450728E-004
+ Step time per cell      2.515064270482981E-004
+ Step       9 time   0.0320000 timestep   4.00E-03
+Switching after   2 CG its, error   0.1655599E+01
+Eigen min  0.245053E-02 Eigen max  0.209652E+01 Condition number    855.540674 Error  0.128670E+01
+Conduction error  0.3819005E-15
+Iteration count       13
+PPCG Iteration count     560 (Total      573)
+ Wall clock    593.062932968140     
+ Average time per cell   2.513728387485672E-004
+ Step time per cell      2.512782439225703E-004
+ Step      10 time   0.0360000 timestep   4.00E-03
+Switching after   2 CG its, error   0.1378565E+01
+Eigen min  0.245053E-02 Eigen max  0.209652E+01 Condition number    855.540674 Error  0.117412E+01
+Conduction error  0.3378225E-15
+Iteration count       13
+PPCG Iteration count     560 (Total      573)
+ 
+ Time   4.000000000000001E-002
+                                 Volume                      Mass                   Density                    Energy                         U
+ step:     10   0.10000000000000000E+04   0.97631143486499786E+05   0.97631143486499781E+02   0.12558387517928999E+02   0.10067162647287516E+04
+ 
+ Wall clock    659.291910886765     
+ Average time per cell   2.514999049708422E-004
+ Step time per cell      2.526428033888806E-004
+ Step      11 time   0.0400000 timestep   4.00E-03
+Switching after   2 CG its, error   0.1162716E+01
+Eigen min  0.245053E-02 Eigen max  0.209652E+01 Condition number    855.540674 Error  0.107829E+01
+Conduction error  0.3068790E-15
+Iteration count       13
+PPCG Iteration count     560 (Total      573)
+ Wall clock    724.799296855927     
+ Average time per cell   2.513536268948387E-004
+ Step time per cell      2.498901822036714E-004
+ Step      12 time   0.0440000 timestep   4.00E-03
+Switching after   2 CG its, error   0.9911006E+00
+Eigen min  0.245053E-02 Eigen max  0.209652E+01 Condition number    855.540674 Error  0.995540E+00
+Conduction error  0.2920960E-15
+Iteration count       13
+PPCG Iteration count     560 (Total      573)
+ Wall clock    793.328938007355     
+ Average time per cell   2.521924775464868E-004
+ Step time per cell      2.614191516840947E-004
+ 
+ Time   4.800000000000001E-002
+                                 Volume                      Mass                   Density                    Energy                         U
+ step:     12   0.10000000000000000E+04   0.97631143486499786E+05   0.97631143486499781E+02   0.12558387517928882E+02   0.10084198621625711E+04
+ 
+ 
+ Calculation complete
+ Tea is finishing
+ First step overhead  -4.18453598022461     
+ Wall clock    793.392097949982     

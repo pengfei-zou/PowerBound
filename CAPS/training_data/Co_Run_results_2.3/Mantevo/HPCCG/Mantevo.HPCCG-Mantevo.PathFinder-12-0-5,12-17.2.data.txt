@@ -1,0 +1,84 @@
+--------------------------------------------------------------------------
+WARNING: a request was made to bind a process. While the system
+supports binding the process itself, at least one node does NOT
+support binding memory to the process location.
+
+  Node:  n03
+
+Open MPI uses the "hwloc" library to perform process and memory
+binding. This error message means that hwloc has indicated that
+processor binding support is not available on this machine.
+
+On OS X, processor and memory binding is not available at all (i.e.,
+the OS does not expose this functionality).
+
+On Linux, lack of the functionality can mean that you are on a
+platform where processor and memory affinity is not supported in Linux
+itself, or that hwloc was built without NUMA and/or processor affinity
+support. When building hwloc (which, depending on your Open MPI
+installation, may be embedded in Open MPI itself), it is important to
+have the libnuma header and library files available. Different linux
+distributions package these files under different names; look for
+packages with the word "numa" in them. You may also need a developer
+version of the package (e.g., with "dev" or "devel" in the name) to
+obtain the relevant header files.
+
+If you are getting this message on a non-OS X, non-Linux platform,
+then hwloc does not support processor / memory affinity on this
+platform. If the OS/platform does actually support processor / memory
+affinity, then you should contact the hwloc maintainers:
+https://github.com/open-mpi/hwloc.
+
+This is a warning only; your job will continue, though performance may
+be degraded.
+--------------------------------------------------------------------------
+Initial Residual = 12621.9
+Iteration = 15   Residual = 162.655
+Iteration = 30   Residual = 1.11063
+Iteration = 45   Residual = 0.00763443
+Iteration = 60   Residual = 5.24604e-05
+Iteration = 75   Residual = 3.60317e-07
+Iteration = 90   Residual = 2.47326e-09
+Iteration = 105   Residual = 1.69623e-11
+Iteration = 120   Residual = 1.16191e-13
+Iteration = 135   Residual = 7.94406e-16
+Iteration = 149   Residual = 7.5516e-18
+Mini-Application Name: hpccg
+Mini-Application Version: 1.0
+Parallelism: 
+  Number of MPI ranks: 1
+  Number of OpenMP threads: 12
+Dimensions: 
+  nx: 400
+  ny: 400
+  nz: 400
+Number of iterations: 149
+Final residual: 7.5516e-18
+#********** Performance Summary (times in sec) ***********: 
+Time Summary: 
+  Total   : 58.1004
+  DDOT    : 3.00871
+  WAXPBY  : 6.79555
+  SPARSEMV: 48.2898
+FLOPS Summary: 
+  Total   : 6.10304e+11
+  DDOT    : 3.8144e+10
+  WAXPBY  : 5.7216e+10
+  SPARSEMV: 5.14944e+11
+MFLOPS Summary: 
+  Total   : 10504.3
+  DDOT    : 12677.8
+  WAXPBY  : 8419.63
+  SPARSEMV: 10663.6
+DDOT Timing Variations: 
+  Min DDOT MPI_Allreduce time: 0.000708573
+  Max DDOT MPI_Allreduce time: 0.000708573
+  Avg DDOT MPI_Allreduce time: 0.000708573
+SPARSEMV OVERHEADS: 
+  SPARSEMV MFLOPS W OVERHEAD: 9234.72
+  SPARSEMV PARALLEL OVERHEAD Time: 7.47189
+  SPARSEMV PARALLEL OVERHEAD Pct: 13.3997
+  SPARSEMV PARALLEL OVERHEAD Setup Time: 7.47139
+  SPARSEMV PARALLEL OVERHEAD Setup Pct: 13.3988
+  SPARSEMV PARALLEL OVERHEAD Bdry Exch Time: 0.000502906
+  SPARSEMV PARALLEL OVERHEAD Bdry Exch Pct: 0.000901884
