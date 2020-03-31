@@ -1,0 +1,105 @@
+
+
+ NAS Parallel Benchmarks (NPB3.3-MZ-MPI) - BT-MZ MPI+OpenMP Benchmark
+
+ Reading from input file inputbt-mz.data
+ Number of zones:  16 x  16
+ Iterations: 200    dt:   0.000100
+ Number of active processes:     2
+
+ Use the default load factors with threads
+ Total number of threads:     48  ( 24.0 threads/process)
+
+ Calculated speedup =     48.00
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Verification being performed for class C
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1 0.3457703287806E+07 0.3457703287806E+07 0.1089509278487E-12
+           2 0.3213621375929E+06 0.3213621375929E+06 0.1320422658492E-12
+           3 0.7002579656870E+06 0.7002579656870E+06 0.1529466301404E-13
+           4 0.4517459627471E+06 0.4517459627471E+06 0.2267767543172E-13
+           5 0.2818715870791E+07 0.2818715870791E+07 0.1156423407174E-14
+ Comparison of RMS-norms of solution error
+           1 0.2059106993570E+06 0.2059106993570E+06 0.1537800980513E-12
+           2 0.1680761129461E+05 0.1680761129461E+05 0.2132015705369E-12
+           3 0.4080731640795E+05 0.4080731640795E+05 0.3102425585186E-13
+           4 0.2836541076778E+05 0.2836541076778E+05 0.1026032398931E-12
+           5 0.2136807610771E+06 0.2136807610771E+06 0.2337233020512E-12
+ Verification Successful
+
+
+ BT-MZ Benchmark Completed.
+ Class           =                        C
+ Size            =            480x  320x 28
+ Iterations      =                      200
+ Time in seconds =                    80.59
+ Total processes =                        2
+ Total threads   =                       48
+ Mop/s total     =                 30115.97
+ Mop/s/thread    =                   627.42
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              14 May 2017
+
+ Compile options:
+    F77          = mpif77
+    FLINK        = $(F77)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -fopenmp
+    FLINKFLAGS   = -O3 -fopenmp
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+ Myid =    0   num_threads =  24
+  SECTION   Time (secs)
+  total   :   80.542  ( 99.94%)
+  rhsx    :    1.019  (  1.26%)
+  rhsy    :    1.004  (  1.25%)
+  rhsz    :    2.630  (  3.26%)
+  rhs     :    9.551  ( 11.85%)
+    --> total  sub-rhs:    4.652  (  5.77%)
+    --> total rest-rhs:    4.899  (  6.08%)
+  xsolve  :   13.303  ( 16.51%)
+  ysolve  :   13.441  ( 16.68%)
+  zsolve  :   14.857  ( 18.44%)
+  qbc_copy:   11.899  ( 14.77%)
+  qbc_comm:   15.503  ( 19.24%)
+    --> total exch_qbc:   27.402  ( 34.00%)
+  add     :    2.004  (  2.49%)
+
+ Myid =    1   num_threads =  24
+  SECTION   Time (secs)
+  total   :   80.588  (100.00%)
+  rhsx    :    1.035  (  1.28%)
+  rhsy    :    1.007  (  1.25%)
+  rhsz    :    2.994  (  3.72%)
+  rhs     :   10.519  ( 13.05%)
+    --> total  sub-rhs:    5.036  (  6.25%)
+    --> total rest-rhs:    5.483  (  6.80%)
+  xsolve  :   14.107  ( 17.51%)
+  ysolve  :   14.402  ( 17.87%)
+  zsolve  :   19.905  ( 24.70%)
+  qbc_copy:   15.191  ( 18.85%)
+  qbc_comm:    4.007  (  4.97%)
+    --> total exch_qbc:   19.198  ( 23.82%)
+  add     :    2.476  (  3.07%)

@@ -1,0 +1,76 @@
+#!/bin/bash
+
+#PBS -N sp_mz
+#PBS -l nodes=n01+n02+n03+n04+n05+n06+n07+n08,walltime=00:20:00
+
+power_cpu=200
+power_mem=100
+
+nodes=`cat $PBS_NODEFILE | sort | uniq`
+
+util_dir=/usr/local/bin
+file_dir=/home/pzou/projects/haswell/multi_node/cluster2017
+software_dir=/home/pzou/software/software-benchmark/
+
+cd $PBS_O_WORKDIR
+module purge
+module load gcc-6.2.0
+module load openmpi-2.0.1
+
+power_bound=no_bound
+method=method1
+
+thNum=24
+while [ $thNum -ge 10 ]; do
+	
+	export OMP_NUM_THREADS=$thNum
+	socket1="0-$(((thNum-1)/2))"
+	socket2="12-$((12+thNum/2-1))"
+	export GOMP_CPU_AFFINITY="0,12,1,13,2,14,3,15,4,16,5,17,6,18,7,19,8,20,9,21,10,22,11,23"
+
+bench="lu-mz"
+bench_code="lu-mz.C.8-$OMP_NUM_THREADS"
+export job_dir=$file_dir/$power_bound/$method/$bench/$PBS_JOBID
+
+mkdir -p $job_dir
+
+#set power capping
+for node in $nodes; do
+    ssh $node "$util_dir/mu_power_gadget -p $power_cpu" 
+    ssh $node "$util_dir/mu_power_gadget -r $power_mem" 
+done
+
+# run experiments
+for i in $(seq 1 1); do
+    echo "run #1: $i"
+    mkdir -p $job_dir/$i
+    sleep 5
+    # start power logs
+    for node in $nodes; do
+        ssh $node "$util_dir/rapl -s 0.1 -c 0,12 -f $job_dir/$i/$bench_code-$node-pwr.log &" &
+    done
+
+    t0=$(date +%s%N)
+    echo "starting $bench_code run $i at $t0"
+    "echo mpirun -n 8 $software_dir/NPB3.3.1-MZ/NPB3.3-MZ-MPI/bin/$bench_code > $job_dir/$i/$bench_code-perf.txt"
+
+    # run jobs
+    mpirun -n 8  $software_dir/NPB3.3.1-MZ/NPB3.3-MZ-MPI-PHASE/bin/lu-mz.C.8 > $job_dir/$i/$bench_code-perf.txt
+    t1=$(date +%s%N)
+
+    # close power logs
+    for node in $nodes; do
+        ssh $node "pkill rapl"
+    done
+
+    t1=$(date +%s%N)
+    echo "finishing $bench_code run $i at $t1"
+done
+thNum=$(echo $thNum-2|bc)
+done
+# remove power capping
+for node in $nodes; do
+    ssh $node "$util_dir/mu_power_gadget -p 200" 
+    ssh $node "$util_dir/mu_power_gadget -r 100" 
+done
+

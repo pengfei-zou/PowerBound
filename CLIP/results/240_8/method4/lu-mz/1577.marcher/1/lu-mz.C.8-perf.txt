@@ -1,0 +1,229 @@
+
+
+ NAS Parallel Benchmarks (NPB3.3-MZ-MPI) - LU-MZ MPI+OpenMP Benchmark
+
+ Reading from input file inputlu-mz.data
+ Number of zones:   4 x   4
+ Iterations: 250    dt:   2.000000
+ Number of active processes:     8
+
+ Use the default load factors with threads
+ Total number of threads:    192  ( 24.0 threads/process)
+
+ Calculated speedup =    192.00
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Time step  220
+ Time step  240
+ Time step  250
+
+ Verification being performed for class C
+ Accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1   0.4108743427233E+05 0.4108743427233E+05 0.9828203068380E-13
+           2   0.3439004802235E+04 0.3439004802235E+04 0.8383524799810E-13
+           3   0.9961331392486E+04 0.9961331392486E+04 0.3268630370839E-13
+           4   0.8321426758084E+04 0.8321426758084E+04 0.2338924223425E-13
+           5   0.7463792419218E+05 0.7463792419218E+05 0.1813190989548E-13
+ Comparison of RMS-norms of solution error
+           1   0.3429276307955E+04 0.3429276307955E+04 0.1420225053518E-12
+           2   0.2336680861825E+03 0.2336680861825E+03 0.7796664081316E-13
+           3   0.8216363109621E+03 0.8216363109621E+03 0.1355990472679E-13
+           4   0.7143809828225E+03 0.7143809828225E+03 0.1225380674326E-13
+           5   0.7057470798773E+04 0.7057470798773E+04 0.3350614252659E-13
+ Comparison of surface integral
+               0.1125826349653E+05 0.1125826349653E+05 0.1762720724986E-12
+ Verification Successful
+
+
+ LU-MZ Benchmark Completed.
+ Class           =                        C
+ Size            =            480x  320x 28
+ Iterations      =                      250
+ Time in seconds =                     9.79
+ Total processes =                        8
+ Total threads   =                      192
+ Mop/s total     =                196192.31
+ Mop/s/thread    =                  1021.83
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              20 Apr 2017
+
+ Compile options:
+    F77          = mpif77
+    FLINK        = $(F77)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -fopenmp
+    FLINKFLAGS   = -O3 -fopenmp
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+ Myid =    0   num_threads =  24
+  SECTION   Time (secs)
+  total   :    9.788  ( 99.99%)
+  rhsx    :    0.268  (  2.74%)
+  rhsy    :    0.529  (  5.40%)
+  rhsz    :    0.367  (  3.75%)
+  rhs     :    1.587  ( 16.21%)
+     --> total  sub-rhs:    1.164  ( 11.89%)
+     --> total rest-rhs:    0.423  (  4.32%)
+  jacld   :    0.797  (  8.14%)
+  blts    :    0.864  (  8.83%)
+  jacu    :    0.786  (  8.03%)
+  buts    :    0.990  ( 10.11%)
+  add     :    0.209  (  2.13%)
+  l2norm  :    0.000  (  0.00%)
+  qbc_copy:    0.228  (  2.33%)
+  qbc_comm:    2.936  ( 29.99%)
+     --> total exch_qbc:    3.164  ( 32.32%)
+
+ Myid =    1   num_threads =  24
+  SECTION   Time (secs)
+  total   :    9.787  ( 99.98%)
+  rhsx    :    0.285  (  2.91%)
+  rhsy    :    0.544  (  5.56%)
+  rhsz    :    0.375  (  3.83%)
+  rhs     :    1.577  ( 16.11%)
+     --> total  sub-rhs:    1.204  ( 12.30%)
+     --> total rest-rhs:    0.373  (  3.81%)
+  jacld   :    0.793  (  8.10%)
+  blts    :    0.894  (  9.14%)
+  jacu    :    0.797  (  8.14%)
+  buts    :    1.008  ( 10.30%)
+  add     :    0.190  (  1.94%)
+  l2norm  :    0.001  (  0.01%)
+  qbc_copy:    0.227  (  2.32%)
+  qbc_comm:    2.669  ( 27.27%)
+     --> total exch_qbc:    2.897  ( 29.59%)
+
+ Myid =    2   num_threads =  24
+  SECTION   Time (secs)
+  total   :    9.786  ( 99.97%)
+  rhsx    :    0.271  (  2.77%)
+  rhsy    :    0.533  (  5.45%)
+  rhsz    :    0.378  (  3.86%)
+  rhs     :    1.656  ( 16.92%)
+     --> total  sub-rhs:    1.182  ( 12.07%)
+     --> total rest-rhs:    0.474  (  4.85%)
+  jacld   :    0.812  (  8.30%)
+  blts    :    0.876  (  8.95%)
+  jacu    :    0.789  (  8.06%)
+  buts    :    0.991  ( 10.13%)
+  add     :    0.231  (  2.36%)
+  l2norm  :    0.000  (  0.00%)
+  qbc_copy:    0.226  (  2.31%)
+  qbc_comm:    2.816  ( 28.77%)
+     --> total exch_qbc:    3.042  ( 31.08%)
+
+ Myid =    3   num_threads =  24
+  SECTION   Time (secs)
+  total   :    9.786  ( 99.97%)
+  rhsx    :    0.277  (  2.83%)
+  rhsy    :    0.542  (  5.53%)
+  rhsz    :    0.377  (  3.86%)
+  rhs     :    1.626  ( 16.61%)
+     --> total  sub-rhs:    1.196  ( 12.22%)
+     --> total rest-rhs:    0.429  (  4.39%)
+  jacld   :    0.803  (  8.20%)
+  blts    :    0.896  (  9.15%)
+  jacu    :    0.790  (  8.07%)
+  buts    :    1.009  ( 10.31%)
+  add     :    0.219  (  2.24%)
+  l2norm  :    0.001  (  0.01%)
+  qbc_copy:    0.228  (  2.33%)
+  qbc_comm:    2.745  ( 28.04%)
+     --> total exch_qbc:    2.973  ( 30.37%)
+
+ Myid =    4   num_threads =  24
+  SECTION   Time (secs)
+  total   :    9.788  ( 99.99%)
+  rhsx    :    0.279  (  2.85%)
+  rhsy    :    0.539  (  5.50%)
+  rhsz    :    0.376  (  3.84%)
+  rhs     :    1.614  ( 16.49%)
+     --> total  sub-rhs:    1.194  ( 12.20%)
+     --> total rest-rhs:    0.420  (  4.29%)
+  jacld   :    0.794  (  8.11%)
+  blts    :    0.895  (  9.14%)
+  jacu    :    0.790  (  8.07%)
+  buts    :    1.007  ( 10.29%)
+  add     :    0.221  (  2.26%)
+  l2norm  :    0.001  (  0.01%)
+  qbc_copy:    0.228  (  2.33%)
+  qbc_comm:    2.749  ( 28.08%)
+     --> total exch_qbc:    2.977  ( 30.41%)
+
+ Myid =    5   num_threads =  24
+  SECTION   Time (secs)
+  total   :    9.787  ( 99.98%)
+  rhsx    :    0.282  (  2.88%)
+  rhsy    :    0.542  (  5.54%)
+  rhsz    :    0.387  (  3.95%)
+  rhs     :    1.653  ( 16.88%)
+     --> total  sub-rhs:    1.210  ( 12.37%)
+     --> total rest-rhs:    0.442  (  4.52%)
+  jacld   :    0.811  (  8.29%)
+  blts    :    0.913  (  9.33%)
+  jacu    :    0.791  (  8.08%)
+  buts    :    1.029  ( 10.51%)
+  add     :    0.239  (  2.44%)
+  l2norm  :    0.000  (  0.00%)
+  qbc_copy:    0.231  (  2.36%)
+  qbc_comm:    2.660  ( 27.18%)
+     --> total exch_qbc:    2.891  ( 29.53%)
+
+ Myid =    6   num_threads =  24
+  SECTION   Time (secs)
+  total   :    9.789  (100.00%)
+  rhsx    :    0.272  (  2.78%)
+  rhsy    :    0.532  (  5.43%)
+  rhsz    :    0.363  (  3.71%)
+  rhs     :    1.556  ( 15.89%)
+     --> total  sub-rhs:    1.166  ( 11.92%)
+     --> total rest-rhs:    0.389  (  3.98%)
+  jacld   :    0.788  (  8.05%)
+  blts    :    0.874  (  8.92%)
+  jacu    :    0.789  (  8.06%)
+  buts    :    0.987  ( 10.08%)
+  add     :    0.204  (  2.09%)
+  l2norm  :    0.000  (  0.00%)
+  qbc_copy:    0.227  (  2.32%)
+  qbc_comm:    2.925  ( 29.88%)
+     --> total exch_qbc:    3.152  ( 32.20%)
+
+ Myid =    7   num_threads =  24
+  SECTION   Time (secs)
+  total   :    9.787  ( 99.98%)
+  rhsx    :    0.278  (  2.84%)
+  rhsy    :    0.542  (  5.54%)
+  rhsz    :    0.368  (  3.76%)
+  rhs     :    1.580  ( 16.14%)
+     --> total  sub-rhs:    1.188  ( 12.14%)
+     --> total rest-rhs:    0.392  (  4.00%)
+  jacld   :    0.797  (  8.15%)
+  blts    :    0.890  (  9.10%)
+  jacu    :    0.832  (  8.49%)
+  buts    :    1.014  ( 10.35%)
+  add     :    0.208  (  2.13%)
+  l2norm  :    0.000  (  0.00%)
+  qbc_copy:    0.229  (  2.34%)
+  qbc_comm:    2.743  ( 28.02%)
+     --> total exch_qbc:    2.972  ( 30.36%)

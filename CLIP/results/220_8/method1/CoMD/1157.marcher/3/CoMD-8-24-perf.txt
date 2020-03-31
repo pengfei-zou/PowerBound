@@ -1,0 +1,128 @@
+Fri Apr 21 22:31:46 2017: Starting Initialization
+
+
+Mini-Application Name    : CoMD-openmp-mpi
+Mini-Application Version : 1.1
+Platform:
+  hostname: n03
+  kernel name: 'Linux'
+  kernel release: '3.10.0-514.16.1.el7.x86_64'
+  processor: 'x86_64'
+Build:
+  CC: '/usr/local/openmpi-2.0.1/bin/mpicc'
+  compiler version: 'gcc (GCC) 6.2.0'
+  CFLAGS: '-std=c99 -fopenmp -DDOUBLE -DDO_MPI -g -O5   '
+  LDFLAGS: ' -lm '
+  using MPI: true
+  Threading: OpenMP (24 threads) 
+  Double Precision: true
+Run Date/Time: 2017-04-21, 22:31:46
+
+Command Line Parameters:
+  doeam: 0
+  potDir: pots
+  potName: Cu_u6.eam
+  potType: funcfl
+  nx: 400
+  ny: 400
+  nz: 400
+  xproc: 2
+  yproc: 2
+  zproc: 2
+  Lattice constant: -1 Angstroms
+  nSteps: 100
+  printRate: 50
+  Time step: 1 fs
+  Initial Temperature: 600 K
+  Initial Delta: 0 Angstroms
+
+Simulation data: 
+  Total atoms        : 256000000
+  Min global bounds  : [   0.0000000000,   0.0000000000,   0.0000000000 ]
+  Max global bounds  : [ 1446.0000000000, 1446.0000000000, 1446.0000000000 ]
+
+Decomposition data: 
+  Processors         :      2,     2,     2
+  Local boxes        :    124,   124,   124 =  1906624
+  Box size           : [   5.8306451613,   5.8306451613,   5.8306451613 ]
+  Box factor         : [   1.0074548875,   1.0074548875,   1.0074548875 ] 
+  Max Link Cell Occupancy: 32 of 64
+
+Potential data: 
+  Potential type   : Lennard-Jones
+  Species name     : Cu
+  Atomic number    : 29
+  Mass             : 63.55 amu
+  Lattice Type     : FCC
+  Lattice spacing  : 3.615 Angstroms
+  Cutoff           : 5.7875 Angstroms
+  Epsilon          : 0.167 eV
+  Sigma            : 2.315 Angstroms
+
+
+Initial energy : -1.166063304017, atom count : 256000000 
+
+Fri Apr 21 22:32:04 2017: Initialization Finished
+
+Fri Apr 21 22:32:04 2017: Starting simulation
+
+#                                                                                         Performance
+#  Loop   Time(fs)       Total Energy   Potential Energy     Kinetic Energy  Temperature   (us/atom)     # Atoms
+      0       0.00    -1.166063304017    -1.243619295617     0.077555991600     600.0000     0.0000    256000000
+     50      50.00    -1.166051686027    -1.193718134771     0.027666448744     214.0372     0.2335    256000000
+    100     100.00    -1.166049791473    -1.206859042975     0.040809251502     315.7145     0.2317    256000000
+Fri Apr 21 22:44:28 2017: Ending simulation
+
+
+
+Simulation Validation:
+  Initial energy  : -1.166063304017
+  Final energy    : -1.166049791473
+  eFinal/eInitial : 0.999988
+  Final atom count : 256000000, no atoms lost
+
+
+Timings for Rank 0
+        Timer        # Calls    Avg/Call (s)   Total (s)    % Loop
+___________________________________________________________________
+total                      1     761.9023      761.9023      102.36
+loop                       1     744.3220      744.3220      100.00
+timestep                   2     372.1591      744.3181      100.00
+  position               100       0.0948        9.4791        1.27
+  velocity               200       0.0759       15.1790        2.04
+  redistribute           101       2.9406      297.0054       39.90
+    atomHalo             101       2.2018      222.3848       29.88
+  force                  101       4.2393      428.1698       57.52
+commHalo                 303       0.6715      203.4593       27.33
+commReduce                15       0.2742        4.1127        0.55
+
+Timing Statistics Across 8 Ranks:
+        Timer        Rank: Min(s)       Rank: Max(s)      Avg(s)    Stdev(s)
+_____________________________________________________________________________
+total                7:  761.9014       0:  761.9023    761.9018      0.0003
+loop                 6:  744.3213       4:  744.3220    744.3217      0.0003
+timestep             6:  744.3173       1:  744.3182    744.3178      0.0004
+  position           1:    9.3692       2:    9.9951      9.5177      0.1892
+  velocity           0:   15.1790       7:   15.7555     15.5378      0.1849
+  redistribute       6:  235.8579       0:  297.0054    249.5912     18.1282
+    atomHalo         6:  144.0782       0:  222.3848    159.7841     23.8452
+  force              0:  428.1698       6:  490.5620    476.5238     18.4942
+commHalo             6:  121.9814       0:  203.4593    138.0844     24.8824
+commReduce           6:    0.2951       0:    4.1127      0.9344      1.2066
+
+---------------------------------------------------
+ Average atom update rate:       0.23 us/atom/task
+---------------------------------------------------
+
+
+---------------------------------------------------
+ Average all atom update rate:   0.03 us/atom
+---------------------------------------------------
+
+
+---------------------------------------------------
+ Average atom rate:             34.39 atoms/us
+---------------------------------------------------
+
+Fri Apr 21 22:44:28 2017: CoMD Ending
+
