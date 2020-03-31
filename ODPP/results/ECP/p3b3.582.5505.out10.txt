@@ -1,0 +1,114 @@
+Importing candle utils for keras
+Configuration file:  /home/pzou/software/software-benchmark/Deep_Learning_Bench/Candle/Pilot3/P3B3/p3b3_default_model.txt
+{'batch_size': 10,
+ 'data_url': 'ftp://ftp.mcs.anl.gov/pub/candle/public/benchmarks/Pilot3/',
+ 'dropout': 0.5,
+ 'emb_l2': 0.001,
+ 'epochs': 10,
+ 'filter_sets': 3,
+ 'filter_sizes': 3,
+ 'learning_rate': 0.01,
+ 'model_name': 'p3b3',
+ 'num_filters': 100,
+ 'optimizer': 'adam',
+ 'train_data': 'P3B3_data.tar.gz',
+ 'w_l2': 0.01,
+ 'wv_len': 300}
+Params:
+{'batch_size': 10,
+ 'data_url': 'ftp://ftp.mcs.anl.gov/pub/candle/public/benchmarks/Pilot3/',
+ 'datatype': <class 'numpy.float32'>,
+ 'dropout': 0.5,
+ 'emb_l2': 0.001,
+ 'epochs': 10,
+ 'experiment_id': 'EXP000',
+ 'filter_sets': 3,
+ 'filter_sizes': 3,
+ 'gpus': [],
+ 'learning_rate': 0.01,
+ 'logfile': None,
+ 'model_name': 'p3b3',
+ 'num_filters': 100,
+ 'optimizer': 'adam',
+ 'output_dir': '/home/pzou/software/software-benchmark/Deep_Learning_Bench/Candle/Pilot3/P3B3/Output/EXP000/RUN000',
+ 'rng_seed': 7102,
+ 'run_id': 'RUN000',
+ 'shuffle': False,
+ 'timeout': -1,
+ 'train_bool': True,
+ 'train_data': 'P3B3_data.tar.gz',
+ 'verbose': None,
+ 'w_l2': 0.01,
+ 'wv_len': 300}
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+Input (InputLayer)              (None, 1500)         0                                            
+__________________________________________________________________________________________________
+embedding (Embedding)           (None, 1500, 300)    1396200     Input[0][0]                      
+__________________________________________________________________________________________________
+0_thfilter (Conv1D)             (None, 1500, 100)    90100       embedding[0][0]                  
+__________________________________________________________________________________________________
+1_thfilter (Conv1D)             (None, 1500, 100)    120100      embedding[0][0]                  
+__________________________________________________________________________________________________
+2_thfilter (Conv1D)             (None, 1500, 100)    150100      embedding[0][0]                  
+__________________________________________________________________________________________________
+global_max_pooling1d_1 (GlobalM (None, 100)          0           0_thfilter[0][0]                 
+__________________________________________________________________________________________________
+global_max_pooling1d_2 (GlobalM (None, 100)          0           1_thfilter[0][0]                 
+__________________________________________________________________________________________________
+global_max_pooling1d_3 (GlobalM (None, 100)          0           2_thfilter[0][0]                 
+__________________________________________________________________________________________________
+concatenate_1 (Concatenate)     (None, 300)          0           global_max_pooling1d_1[0][0]     
+                                                                 global_max_pooling1d_2[0][0]     
+                                                                 global_max_pooling1d_3[0][0]     
+__________________________________________________________________________________________________
+dropout_1 (Dropout)             (None, 300)          0           concatenate_1[0][0]              
+__________________________________________________________________________________________________
+Dense0 (Dense)                  (None, 6)            1806        dropout_1[0][0]                  
+__________________________________________________________________________________________________
+Dense1 (Dense)                  (None, 2)            602         dropout_1[0][0]                  
+__________________________________________________________________________________________________
+Dense2 (Dense)                  (None, 2)            602         dropout_1[0][0]                  
+__________________________________________________________________________________________________
+Dense3 (Dense)                  (None, 3)            903         dropout_1[0][0]                  
+==================================================================================================
+Total params: 1,760,413
+Trainable params: 1,760,413
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Train on 8000 samples, validate on 2000 samples
+Epoch 1/10
+ - 28s - loss: 16.9946 - Dense0_loss: 2.3169 - Dense1_loss: 1.3622 - Dense2_loss: 0.9495 - Dense3_loss: 3.1866 - Dense0_acc: 0.7397 - Dense1_acc: 0.8349 - Dense2_acc: 0.9012 - Dense3_acc: 0.6241 - val_loss: 28.7447 - val_Dense0_loss: 8.1269 - val_Dense1_loss: 2.0559 - val_Dense2_loss: 1.9043 - val_Dense3_loss: 5.4648 - val_Dense0_acc: 0.4635 - val_Dense1_acc: 0.8695 - val_Dense2_acc: 0.8780 - val_Dense3_acc: 0.6395
+Current time ....27.925
+Epoch 2/10
+ - 25s - loss: 25.6410 - Dense0_loss: 4.8941 - Dense1_loss: 2.5410 - Dense2_loss: 1.7230 - Dense3_loss: 7.2958 - Dense0_acc: 0.6901 - Dense1_acc: 0.8377 - Dense2_acc: 0.8915 - Dense3_acc: 0.5411 - val_loss: 24.5385 - val_Dense0_loss: 4.0376 - val_Dense1_loss: 2.4828 - val_Dense2_loss: 1.9342 - val_Dense3_loss: 8.9133 - val_Dense0_acc: 0.7495 - val_Dense1_acc: 0.8440 - val_Dense2_acc: 0.8800 - val_Dense3_acc: 0.4470
+Current time ....52.745
+Epoch 3/10
+ - 25s - loss: 22.5139 - Dense0_loss: 4.5167 - Dense1_loss: 2.2689 - Dense2_loss: 1.7327 - Dense3_loss: 8.9067 - Dense0_acc: 0.7191 - Dense1_acc: 0.8586 - Dense2_acc: 0.8925 - Dense3_acc: 0.4461 - val_loss: 21.7746 - val_Dense0_loss: 4.0215 - val_Dense1_loss: 2.5834 - val_Dense2_loss: 1.9342 - val_Dense3_loss: 8.9294 - val_Dense0_acc: 0.7505 - val_Dense1_acc: 0.8385 - val_Dense2_acc: 0.8800 - val_Dense3_acc: 0.4460
+Current time ....78.162
+Epoch 4/10
+ - 25s - loss: 20.7434 - Dense0_loss: 4.6489 - Dense1_loss: 2.5478 - Dense2_loss: 1.7327 - Dense3_loss: 8.6547 - Dense0_acc: 0.7114 - Dense1_acc: 0.8415 - Dense2_acc: 0.8925 - Dense3_acc: 0.4629 - val_loss: 19.8783 - val_Dense0_loss: 4.0618 - val_Dense1_loss: 2.1765 - val_Dense2_loss: 1.9342 - val_Dense3_loss: 8.9133 - val_Dense0_acc: 0.7480 - val_Dense1_acc: 0.8640 - val_Dense2_acc: 0.8800 - val_Dense3_acc: 0.4470
+Current time ....103.576
+Epoch 5/10
+ - 25s - loss: 20.8175 - Dense0_loss: 4.5444 - Dense1_loss: 2.9306 - Dense2_loss: 1.7327 - Dense3_loss: 8.6453 - Dense0_acc: 0.7179 - Dense1_acc: 0.8179 - Dense2_acc: 0.8925 - Dense3_acc: 0.4636 - val_loss: 19.9552 - val_Dense0_loss: 4.0618 - val_Dense1_loss: 2.1276 - val_Dense2_loss: 1.9342 - val_Dense3_loss: 8.9133 - val_Dense0_acc: 0.7480 - val_Dense1_acc: 0.8680 - val_Dense2_acc: 0.8800 - val_Dense3_acc: 0.4470
+Current time ....128.971
+Epoch 6/10
+ - 25s - loss: 19.9815 - Dense0_loss: 4.8028 - Dense1_loss: 2.3997 - Dense2_loss: 1.7327 - Dense3_loss: 8.6534 - Dense0_acc: 0.7019 - Dense1_acc: 0.8510 - Dense2_acc: 0.8925 - Dense3_acc: 0.4631 - val_loss: 19.0989 - val_Dense0_loss: 4.5132 - val_Dense1_loss: 1.8616 - val_Dense2_loss: 1.9342 - val_Dense3_loss: 8.9133 - val_Dense0_acc: 0.7195 - val_Dense1_acc: 0.8845 - val_Dense2_acc: 0.8800 - val_Dense3_acc: 0.4470
+Current time ....154.370
+Epoch 7/10
+ - 25s - loss: 21.0305 - Dense0_loss: 5.4199 - Dense1_loss: 2.5927 - Dense2_loss: 1.7327 - Dense3_loss: 8.6514 - Dense0_acc: 0.6636 - Dense1_acc: 0.8386 - Dense2_acc: 0.8925 - Dense3_acc: 0.4633 - val_loss: 20.6023 - val_Dense0_loss: 4.3294 - val_Dense1_loss: 2.1019 - val_Dense2_loss: 1.9342 - val_Dense3_loss: 8.9133 - val_Dense0_acc: 0.7310 - val_Dense1_acc: 0.8695 - val_Dense2_acc: 0.8800 - val_Dense3_acc: 0.4470
+Current time ....179.788
+Epoch 8/10
+ - 25s - loss: 21.7358 - Dense0_loss: 5.8131 - Dense1_loss: 2.2427 - Dense2_loss: 1.7327 - Dense3_loss: 8.6509 - Dense0_acc: 0.6393 - Dense1_acc: 0.8605 - Dense2_acc: 0.8925 - Dense3_acc: 0.4633 - val_loss: 21.7937 - val_Dense0_loss: 5.7300 - val_Dense1_loss: 2.1679 - val_Dense2_loss: 1.9342 - val_Dense3_loss: 8.9133 - val_Dense0_acc: 0.6445 - val_Dense1_acc: 0.8655 - val_Dense2_acc: 0.8800 - val_Dense3_acc: 0.4470
+Current time ....205.200
+Epoch 9/10
+ - 25s - loss: 20.6001 - Dense0_loss: 5.4973 - Dense1_loss: 2.1484 - Dense2_loss: 1.7327 - Dense3_loss: 8.6514 - Dense0_acc: 0.6588 - Dense1_acc: 0.8666 - Dense2_acc: 0.8925 - Dense3_acc: 0.4633 - val_loss: 20.1911 - val_Dense0_loss: 5.4076 - val_Dense1_loss: 2.1679 - val_Dense2_loss: 1.9342 - val_Dense3_loss: 8.9133 - val_Dense0_acc: 0.6645 - val_Dense1_acc: 0.8655 - val_Dense2_acc: 0.8800 - val_Dense3_acc: 0.4470
+Current time ....230.698
+Epoch 10/10
+ - 25s - loss: 19.9024 - Dense0_loss: 4.5800 - Dense1_loss: 2.4176 - Dense2_loss: 1.7327 - Dense3_loss: 8.6514 - Dense0_acc: 0.7158 - Dense1_acc: 0.8499 - Dense2_acc: 0.8925 - Dense3_acc: 0.4633 - val_loss: 19.1365 - val_Dense0_loss: 4.2874 - val_Dense1_loss: 2.1679 - val_Dense2_loss: 1.9342 - val_Dense3_loss: 8.9133 - val_Dense0_acc: 0.7340 - val_Dense1_acc: 0.8655 - val_Dense2_acc: 0.8800 - val_Dense3_acc: 0.4470
+Current time ....256.154
+Return:  <keras.callbacks.History object at 0x7f6004b9da20>
+264595
+start time: 05:24:47

@@ -1,0 +1,22 @@
+Transpose Starting...
+
+GPU Device 0: "TITAN Xp" with compute capability 6.1
+
+> Device 0: "TITAN Xp"
+> SM Capability 6.1 detected:
+> [TITAN Xp] has 30 MP(s) x 128 (Cores/MP) = 3840 (Cores)
+> Compute performance scaling factor = 1.00
+
+Matrix size: 1024x1024 (64x64 tiles), tile size: 16x16, block size: 16x16
+
+transpose simple copy       , Throughput = 162.9038 GB/s, Time = 0.04796 ms, Size = 1048576 fp32 elements, NumDevsUsed = 1, Workgroup = 256
+transpose shared memory copy, Throughput = 122.2274 GB/s, Time = 0.06392 ms, Size = 1048576 fp32 elements, NumDevsUsed = 1, Workgroup = 256
+transpose naive             , Throughput = 26.4209 GB/s, Time = 0.29569 ms, Size = 1048576 fp32 elements, NumDevsUsed = 1, Workgroup = 256
+transpose coalesced         , Throughput = 116.4977 GB/s, Time = 0.06706 ms, Size = 1048576 fp32 elements, NumDevsUsed = 1, Workgroup = 256
+transpose optimized         , Throughput = 133.8358 GB/s, Time = 0.05837 ms, Size = 1048576 fp32 elements, NumDevsUsed = 1, Workgroup = 256
+transpose coarse-grained    , Throughput = 135.3885 GB/s, Time = 0.05770 ms, Size = 1048576 fp32 elements, NumDevsUsed = 1, Workgroup = 256
+transpose fine-grained      , Throughput = 135.3817 GB/s, Time = 0.05771 ms, Size = 1048576 fp32 elements, NumDevsUsed = 1, Workgroup = 256
+transpose diagonal          , Throughput = 89.1395 GB/s, Time = 0.08764 ms, Size = 1048576 fp32 elements, NumDevsUsed = 1, Workgroup = 256
+Test passed
+701
+start time: 10:55:41

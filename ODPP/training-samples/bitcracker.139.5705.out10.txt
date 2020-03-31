@@ -1,0 +1,79 @@
+
+---------> BitCracker: BitLocker password cracking tool <---------
+
+
+====================================
+Selected device: GPU TITAN Xp (ID: 0)
+====================================
+
+Compute capability: 6.1
+Clock rate: 139000
+Clock rate: 139 MHz (0.14 GHz)
+Memory Clock Rate (KHz): 5705000
+Memory Bus Width (bits): 384
+Peak Memory Bandwidth (GB/s): 547.680000
+Device copy overlap: Enabled
+Async memory engine count: 2
+Concurrent kernels: 1
+Kernel execition timeout: Disabled
+Total global mem:  12788498432 bytes
+Free memory: 12611289088 bytes
+Texture Alignment:  512
+Multiprocessor count:  30
+Shared mem per mp:  49152
+Registers per mp:  65536
+Threads in warp:  32
+Max threads per block:  1024
+Max thread dimensions:  (1024, 1024, 64)
+Max grid dimensions:  (2147483647, 65535, 65535)
+
+For this session, BitCracker requires at least 301989888 bytes of memory
+
+====================================
+Retrieving Info
+====================================
+
+Reading hash file "./test_hash/imgWin10Compat_user_password.txt"
+$bitlocker$0$16$9b53194ca3dd1a0f3a7a3f1a744bc67e$1048576$12$a0da3fc75f6cd30103000000$60$da94f514cf552d95f5a684280aa261cb106a240e4f570e0b625cc196b4aec5a03dcb1f766217667934278eb97b91ba6b7b9fc9c0f3701b6270f3fc28
+
+
+====================================
+Attack
+====================================
+
+Type of attack: User Password
+CUDA Threads: 1024
+CUDA Blocks: 256
+Psw per thread: 1
+Max Psw per kernel: 262144
+Dictionary: ./Dictionary/10-million-password-list-top-1000000.txt
+Strict Check (-s): No
+MAC Comparison (-m): No
+
+CUDA Kernel execution:
+	Effective passwords: 262144
+	Passwords Range:
+		password
+		.....
+		coldduck
+	Time: 1743.685000 sec
+	Passwords x second:   150.34 pw/sec
+CUDA Kernel execution:
+	Effective passwords: 225986
+	Passwords Range:
+		coldcase
+		.....
+		Vjht0409
+	Time: 1544.499375 sec
+	Passwords x second:   146.32 pw/sec
+
+
+================================================
+CUDA attack completed
+Passwords evaluated: 488130
+Password not found!
+================================================
+
+
+3289027
+start time: 14:06:52

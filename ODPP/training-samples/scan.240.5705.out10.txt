@@ -1,0 +1,140 @@
+./scan Starting...
+
+GPU Device 0: "TITAN Xp" with compute capability 6.1
+
+Allocating and initializing host arrays...
+Allocating and initializing CUDA arrays...
+Initializing CUDA-C scan...
+
+*** Running GPU scan for short arrays (100 identical iterations)...
+
+Running scan for 4 elements (157286400 arrays)...
+Validating the results...
+...reading back GPU results
+ ...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 8 elements (78643200 arrays)...
+Validating the results...
+...reading back GPU results
+ ...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 16 elements (39321600 arrays)...
+Validating the results...
+...reading back GPU results
+ ...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 32 elements (19660800 arrays)...
+Validating the results...
+...reading back GPU results
+ ...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 64 elements (9830400 arrays)...
+Validating the results...
+...reading back GPU results
+ ...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 128 elements (4915200 arrays)...
+Validating the results...
+...reading back GPU results
+ ...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 256 elements (2457600 arrays)...
+Validating the results...
+...reading back GPU results
+ ...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 512 elements (1228800 arrays)...
+Validating the results...
+...reading back GPU results
+ ...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 1024 elements (614400 arrays)...
+Validating the results...
+...reading back GPU results
+ ...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+
+scan, Throughput = 0.0160 MElements/s, Time = 0.06394 s, Size = 1024 Elements, NumDevsUsed = 1, Workgroup = 256
+
+***Running GPU scan for large arrays (100 identical iterations)...
+
+Running scan for 2048 elements (307200 arrays)...
+Validating the results...
+...reading back GPU results
+...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 4096 elements (153600 arrays)...
+Validating the results...
+...reading back GPU results
+...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 8192 elements (76800 arrays)...
+Validating the results...
+...reading back GPU results
+...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 16384 elements (38400 arrays)...
+Validating the results...
+...reading back GPU results
+...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 32768 elements (19200 arrays)...
+Validating the results...
+...reading back GPU results
+...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 65536 elements (9600 arrays)...
+Validating the results...
+...reading back GPU results
+...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 131072 elements (4800 arrays)...
+Validating the results...
+...reading back GPU results
+...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+Running scan for 262144 elements (2400 arrays)...
+Validating the results...
+...reading back GPU results
+...scanExclusiveHost()
+ ...comparing the results
+ ...Results Match
+
+
+scan, Throughput = 2.7545 MElements/s, Time = 0.09517 s, Size = 262144 Elements, NumDevsUsed = 1, Workgroup = 256
+
+Shutting down...
+144172
+start time: 01:33:19

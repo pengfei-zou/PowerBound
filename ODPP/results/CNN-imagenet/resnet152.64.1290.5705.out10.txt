@@ -1,0 +1,48 @@
+TensorFlow:  1.13
+Model:       resnet152
+Dataset:     imagenet
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 200
+Num epochs:  0.01
+Devices:     ['/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Major Loop Start:Sat Sep  7 00:39:50 2019
+Step	Img/sec	total_loss
+1	images/sec: 87.0 +/- 0.0 (jitter = 0.0)	8.700
+10	images/sec: 88.0 +/- 0.1 (jitter = 0.5)	8.775
+20	images/sec: 88.1 +/- 0.1 (jitter = 0.3)	9.018
+30	images/sec: 87.6 +/- 0.2 (jitter = 0.7)	8.772
+40	images/sec: 87.6 +/- 0.2 (jitter = 0.5)	8.932
+50	images/sec: 87.6 +/- 0.1 (jitter = 0.6)	8.924
+60	images/sec: 87.7 +/- 0.1 (jitter = 0.5)	8.740
+70	images/sec: 87.7 +/- 0.1 (jitter = 0.6)	8.811
+80	images/sec: 87.7 +/- 0.1 (jitter = 0.6)	8.632
+90	images/sec: 87.7 +/- 0.1 (jitter = 0.6)	8.811
+100	images/sec: 87.7 +/- 0.1 (jitter = 0.5)	8.866
+110	images/sec: 87.7 +/- 0.1 (jitter = 0.5)	8.877
+120	images/sec: 87.7 +/- 0.1 (jitter = 0.6)	8.831
+130	images/sec: 87.7 +/- 0.1 (jitter = 0.5)	8.768
+140	images/sec: 87.7 +/- 0.1 (jitter = 0.5)	9.046
+150	images/sec: 87.7 +/- 0.1 (jitter = 0.6)	8.988
+160	images/sec: 87.7 +/- 0.1 (jitter = 0.6)	8.604
+170	images/sec: 87.7 +/- 0.1 (jitter = 0.6)	8.917
+180	images/sec: 87.7 +/- 0.1 (jitter = 0.6)	8.916
+190	images/sec: 87.7 +/- 0.1 (jitter = 0.6)	8.799
+200	images/sec: 87.7 +/- 0.1 (jitter = 0.6)	8.885
+Major Loop End:Sat Sep  7 00:42:16 2019
+----------------------------------------------------------------
+total images/sec: 87.72
+----------------------------------------------------------------
+195091
+start time: 00:39:02

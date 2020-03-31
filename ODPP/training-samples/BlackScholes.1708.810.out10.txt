@@ -1,0 +1,32 @@
+[./BlackScholes] - Starting...
+GPU Device 0: "TITAN Xp" with compute capability 6.1
+
+Initializing data...
+...allocating CPU memory for options.
+...allocating GPU memory for options.
+...generating input data in CPU mem.
+...copying input data to GPU mem.
+Data init done.
+
+Executing Black-Scholes GPU kernel (40960 iterations)...
+Options count             : 80000000     
+BlackScholesGPU() time    : 1.855407 msec
+Effective memory bandwidth: 431.172217 GB/s
+Gigaoptions per second    : 43.117222     
+
+BlackScholes, Throughput = 43.1172 GOptions/s, Time = 0.00186 s, Size = 80000000 options, NumDevsUsed = 1, Workgroup = 128
+
+Reading back GPU results...
+Checking the results...
+Shutting down...
+...releasing GPU memory.
+...releasing CPU memory.
+Shutdown done.
+
+[BlackScholes] - Test Summary
+
+NOTE: The CUDA Samples are not meant for performance measurements. Results may vary when GPU Boost is enabled.
+
+Test passed
+80668
+start time: 13:43:32

@@ -1,0 +1,89 @@
+LAMMPS (18 Jun 2019)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/comm.cpp:88)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 1.6796 1.6796 1.6796
+Created orthogonal box = (0 0 0) to (188.115 188.115 188.115)
+  1 by 1 by 1 MPI processor grid
+Created 5619712 atoms
+  create_atoms CPU = 4.98612 secs
+
+--------------------------------------------------------------------------
+- Using acceleration for lj/cut:
+-  with 1 proc(s) per device.
+-  with 1 thread(s) per proc.
+-  with OpenCL Parameters for: GENERIC
+--------------------------------------------------------------------------
+Device 0: TITAN Xp, 30 CUs, 12 GB, 0.85 GHZ (Mixed Precision)
+--------------------------------------------------------------------------
+
+Initializing Device and compiling on process 0...Done.
+Initializing Device 0 on core 0...Done.
+
+Setting up Verlet run ...
+  Unit style    : lj
+  Current step  : 0
+  Time step     : 0.005
+Per MPI rank memory allocation (min/avg/max) = 813.7 | 813.7 | 813.7 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0         1.44   -6.7733672            0   -4.6133676   -5.0196702 
+     100   0.75920298   -5.7611212            0    -4.622317   0.19142793 
+     200   0.75667364     -5.75763            0   -4.6226198   0.22631541 
+     300   0.74854027   -5.7452955            0   -4.6224853   0.30415253 
+     400   0.73950364   -5.7314764            0   -4.6222212   0.38746512 
+     500   0.73087222   -5.7181971            0   -4.6218889   0.46808243 
+     600   0.72326734    -5.706444            0   -4.6215432   0.53729137 
+     700   0.71670047   -5.6962781            0   -4.6212276   0.59553515 
+     800    0.7110324   -5.6874504            0    -4.620902   0.64515164 
+     900   0.70695383   -5.6810855            0    -4.620655   0.67951033 
+    1000   0.70403798   -5.6765247            0   -4.6204679   0.70272462 
+Loop time of 274.365 on 1 procs for 1000 steps with 5619712 atoms
+
+Performance: 1574.547 tau/day, 3.645 timesteps/s
+95.5% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 119.22     | 119.22     | 119.22     |   0.0 | 43.45
+Neigh   | 4.7839e-05 | 4.7839e-05 | 4.7839e-05 |   0.0 |  0.00
+Comm    | 26.936     | 26.936     | 26.936     |   0.0 |  9.82
+Output  | 0.24278    | 0.24278    | 0.24278    |   0.0 |  0.09
+Modify  | 100.7      | 100.7      | 100.7      |   0.0 | 36.70
+Other   |            | 27.27      |            |       |  9.94
+
+Nlocal:    5.61971e+06 ave 5.61971e+06 max 5.61971e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    519785 ave 519785 max 519785 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 0
+Ave neighs/atom = 0
+Neighbor list builds = 50
+Dangerous builds not checked
+
+
+---------------------------------------------------------------------
+      Device Time Info (average): 
+---------------------------------------------------------------------
+Data Transfer:   21.9422 s.
+Data Cast/Pack:  66.9908 s.
+Neighbor copy:   0.1111 s.
+Neighbor build:  5.6603 s.
+Force calc:      29.9059 s.
+Neighbor (CPU):  5.0134 s.
+Device Overhead: 0.1003 s.
+Average split:   1.0000.
+Threads / atom:  1.
+Max Mem / Proc:  7783.12 MB.
+CPU Driver_Time: 0.1010 s.
+CPU Idle_Time:   47.4781 s.
+---------------------------------------------------------------------
+
+
+Please see the log.cite file for references relevant to this simulation
+
+Total wall time: 0:04:43
+284371
+start time: 05:12:35

@@ -1,0 +1,40 @@
+[[histogram]] - Starting...
+GPU Device 0: "TITAN Xp" with compute capability 6.1
+
+CUDA device [TITAN Xp] has 30 Multi-Processors, Compute 6.1
+Initializing data...
+...allocating CPU memory.
+...generating input data
+...allocating GPU memory and copying input data
+
+Starting up 64-bin histogram...
+
+Running 64-bin GPU histogram for 1073741824 bytes (16 runs)...
+
+histogram64() time (average) : 0.00326 sec, 328977.6176 MB/sec
+
+histogram64, Throughput = 328977.6176 MB/s, Time = 0.00326 s, Size = 1073741824 Bytes, NumDevsUsed = 1, Workgroup = 64
+
+Validating GPU results...
+ ...reading back GPU results
+ ...histogram64CPU()
+Shutting down 64-bin histogram...
+
+
+Initializing 256-bin histogram...
+Running 256-bin GPU histogram for 1073741824 bytes (16 runs)...
+
+histogram256() time (average) : 0.00351 sec, 306051.0480 MB/sec
+
+histogram256, Throughput = 306051.0480 MB/s, Time = 0.00351 s, Size = 1073741824 Bytes, NumDevsUsed = 1, Workgroup = 192
+
+Validating GPU results...
+ ...reading back GPU results
+Shutting down...
+
+NOTE: The CUDA Samples are not meant for performance measurements. Results may vary when GPU Boost is enabled.
+
+[histogram] - Test Summary
+Test passed
+28129
+start time: 16:45:52

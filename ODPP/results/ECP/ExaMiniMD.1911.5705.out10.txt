@@ -1,0 +1,54 @@
+macro  KOKKOS_ENABLE_CUDA      : defined
+macro  CUDA_VERSION          = 10000 = version 10.0
+Kokkos::Cuda[ 0 ] TITAN Xp capability 6.1, Total Global Memory: 11.91 G, Shared Memory per Block: 48 K : Selected
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 160 0 160 0 160 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+
+fix 1 all nve 
+
+timestep 0.005 
+thermo 100 
+
+run 1000 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 16384000 16384000
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+100 0.733035 -5.332379 -4.232827 15.709671 1.042924e+08
+200 0.740314 -5.343293 -4.232822 31.765355 1.020449e+08
+300 0.737660 -5.339313 -4.232822 47.923789 1.013960e+08
+400 0.733390 -5.332908 -4.232823 64.183762 1.007628e+08
+500 0.728307 -5.325283 -4.232824 80.514311 1.003273e+08
+600 0.723120 -5.317504 -4.232824 96.894250 1.000248e+08
+700 0.717525 -5.309111 -4.232824 113.321071 9.973932e+07
+800 0.712705 -5.301881 -4.232824 129.789325 9.948838e+07
+900 0.707500 -5.294073 -4.232823 146.276986 9.937129e+07
+1000 0.702793 -5.287013 -4.232823 162.800211 9.915740e+07
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 16384000 | 162.800219 127.269831 20.422040 8.392846 6.715253 | 6.142498 1.006387e+08 1.006387e+08 PERFORMANCE
+171477
+start time: 01:16:05
